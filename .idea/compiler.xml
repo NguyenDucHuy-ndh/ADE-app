@@ -9,8 +9,5 @@
         <module name="ADE-app" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ADE-app" target="19" />
-    </bytecodeTargetLevel>
   </component>
 </project>
