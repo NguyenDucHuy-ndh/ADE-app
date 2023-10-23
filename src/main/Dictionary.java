@@ -1,19 +1,20 @@
 package main;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+
+import java.util.ArrayList;
+
 public class Dictionary {
-    private ObservableList<Word> wordList;
+
+    private ArrayList<Word> wordList;
 
     public Dictionary() {
-        wordList = FXCollections.observableArrayList();
+        wordList = new ArrayList<>();
     }
 
     public void addWord(Word word) {
         wordList.add(word);
     }
 
-    public ObservableList<Word> getWordList() {
+    public ArrayList<Word> getWordList() {
         return wordList;
     }
-
 }
