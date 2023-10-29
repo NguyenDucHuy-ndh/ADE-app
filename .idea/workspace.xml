@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="218c7948-1dc7-4053-b391-007900ae36fb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DictionaryCommandline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DictionaryCommandline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DictionaryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DictionaryManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Word.java" afterDir="false" />
-    </list>
+    <list default="true" id="63529a65-98df-4c6c-8721-51c10bd39991" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,87 +17,47 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
 }</component>
-  <component name="ProjectId" id="2WOJMGX9r9BAfztxLOatnDcbn4m" />
+  <component name="ProjectId" id="2XNwxcKx3rbbWdUUbZZg2qbF5f0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/UNIVERSITY/2023-2024/BTL_OOP/ADE-app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/UNIVERSITY/2023-2024/BTL_OOP/ADE-app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="ADE-app" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
-  </component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="218c7948-1dc7-4053-b391-007900ae36fb" name="Changes" comment="" />
-      <created>1696597643133</created>
+      <changelist id="63529a65-98df-4c6c-8721-51c10bd39991" name="Changes" comment="" />
+      <created>1698483095585</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1696597643133</updated>
-      <workItem from="1696597644200" duration="16000" />
-      <workItem from="1697011858901" duration="3048000" />
-      <workItem from="1697015855874" duration="42000" />
-      <workItem from="1697015972285" duration="11000" />
-      <workItem from="1697015991206" duration="75000" />
-      <workItem from="1697016074752" duration="164000" />
-      <workItem from="1697016379077" duration="194000" />
-      <workItem from="1697016586235" duration="11000" />
-      <workItem from="1697016691665" duration="28000" />
-      <workItem from="1697016868147" duration="249000" />
-      <workItem from="1697017682136" duration="300000" />
-      <workItem from="1697018031171" duration="101000" />
-      <workItem from="1697018170152" duration="1305000" />
-      <workItem from="1697090767093" duration="1343000" />
-      <workItem from="1697701554922" duration="71000" />
-      <workItem from="1697890047066" duration="19000" />
-      <workItem from="1698058328797" duration="185000" />
-      <workItem from="1698478237708" duration="1197000" />
-      <workItem from="1698482256682" duration="62000" />
-      <workItem from="1698482360239" duration="318000" />
-      <workItem from="1698483441900" duration="22000" />
-      <workItem from="1698483474584" duration="9000" />
-      <workItem from="1698590251267" duration="148000" />
+      <updated>1698483095585</updated>
+      <workItem from="1698483096584" duration="316000" />
+      <workItem from="1698483422561" duration="16000" />
+      <workItem from="1698483485020" duration="15686000" />
+      <workItem from="1698590414339" duration="463000" />
+      <workItem from="1698592407635" duration="19000" />
+      <workItem from="1698592667187" duration="45000" />
+      <workItem from="1698592740719" duration="14000" />
     </task>
     <servers />
   </component>
