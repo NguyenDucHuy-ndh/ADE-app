@@ -4,27 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63529a65-98df-4c6c-8721-51c10bd39991" name="Changes" comment="" />
+    <list default="true" id="f4d1b5e9-dd8f-4f0d-8c35-0eb74b3bb771" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Dictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Dictionary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DictionaryCommandline$ReverseAlphabeticalComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DictionaryCommandline$ReverseAlphabeticalComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DictionaryCommandline.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DictionaryCommandline.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DictionaryDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DictionaryDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DictionaryManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DictionaryManagement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Word.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Word.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 6
-}</component>
-  <component name="ProjectId" id="2XNwxcKx3rbbWdUUbZZg2qbF5f0" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2XURIg4YKvH9MlqAbk1jKqPfnS4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,40 +37,19 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/UNIVERSITY/2023-2024/Code",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+    "last_opened_file_path": "D:/UNIVERSITY/2023-2024/BTL_OOP/ADE-app"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="63529a65-98df-4c6c-8721-51c10bd39991" name="Changes" comment="" />
-      <created>1698483095585</created>
+      <changelist id="f4d1b5e9-dd8f-4f0d-8c35-0eb74b3bb771" name="Changes" comment="" />
+      <created>1698681593984</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1698483095585</updated>
-      <workItem from="1698483096584" duration="316000" />
-      <workItem from="1698483422561" duration="16000" />
-      <workItem from="1698483485020" duration="15686000" />
-      <workItem from="1698590414339" duration="463000" />
-      <workItem from="1698592407635" duration="19000" />
-      <workItem from="1698592667187" duration="45000" />
-      <workItem from="1698592740719" duration="14000" />
-      <workItem from="1698595277140" duration="27000" />
+      <updated>1698681593984</updated>
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
 </project>
