@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import java.net.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.paint.*?>
@@ -24,7 +25,7 @@
                <children>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Account">
+                        <Button fx:id="account" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Account">
                            <graphic>
                               <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -37,7 +38,7 @@
                   </HBox>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="HOME">
+                        <Button fx:id="home" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="HOME">
                            <graphic>
                               <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -47,12 +48,15 @@
                            </graphic>
                         </Button>
                      </children>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
                   </HBox>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="SEARCH">
+                        <Button fx:id="search" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="SEARCH">
                            <graphic>
-                              <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="search" fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@Resource/Image/search.png" />
                                  </image>
@@ -63,7 +67,7 @@
                   </HBox>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="ABOUT">
+                        <Button fx:id="about" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="ABOUT">
                            <graphic>
                               <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -76,7 +80,7 @@
                   </HBox>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="EXIST">
+                        <Button fx:id="exist" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="EXIST">
                            <graphic>
                               <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -86,6 +90,9 @@
                            </graphic>
                         </Button>
                      </children>
+                     <VBox.margin>
+                        <Insets top="140.0" />
+                     </VBox.margin>
                   </HBox>
                </children>
             </VBox>

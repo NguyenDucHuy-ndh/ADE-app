@@ -1,3 +1,5 @@
+//package main.java;
+//
 //import javafx.application.Application;
 //import javafx.fxml.FXMLLoader;
 //import javafx.scene.Parent;
@@ -65,7 +67,7 @@
 //    @Override
 //    public void start(Stage primaryStage) throws Exception {
 //        Parent root = FXMLLoader.load(getClass().getResource("Display.fxml"));
-//        //primaryStage.setTitle("Dictionary App");
+//        primaryStage.setTitle("Dictionary App");
 //        Scene scene = new Scene(root);
 //        //primaryStage.initStyle(StageStyle.UNDECORATED);
 //        //primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("images/app_icon.png")));
