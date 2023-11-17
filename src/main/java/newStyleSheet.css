@@ -1,0 +1,31 @@
+
+.buttonOk {
+
+    -fx-text-fill: #3f2e33;
+    -fx-background-color: blue;
+    -fx-effect: dropshadow(three-pass-box, #3c3f41, 20, 0, -10, 5);
+    -fx-font-weight: bold;
+    -fx-background-radius: 20 20 20 20;
+    -fx-padding: 20 20 20 20;
+    -fx-font-size: 13px;
+}
+.buttonOk:hover {
+
+    -fx-text-fill: black;
+    -fx-background-color: yellow;
+    -fx-effect: dropshadow(three-pass-box, #3c3f41, 20, 0, -10, 5);
+    -fx-font-weight: bold;
+    -fx-background-radius: 20 20 20 20;
+    -fx-padding: 20 20 20 20;
+    -fx-font-size: 13px;
+}
+
+.buttonOk:focused {
+    -fx-text-fill: black;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, #3c3f41, 20, 0, -10, 5);
+    -fx-font-weight: bold;
+    -fx-background-radius: 20 20 20 20;
+    -fx-padding: 20 20 20 20;
+    -fx-font-size: 13px;
+}

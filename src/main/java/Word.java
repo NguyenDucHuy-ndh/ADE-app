@@ -1,3 +1,5 @@
+package main.java;
+
 public class Word {
     private String word_target; // Từ vựng tiếng Anh
     private String word_explain; // Giải nghĩa tiếng Việt

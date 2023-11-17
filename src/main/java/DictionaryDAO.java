@@ -1,4 +1,5 @@
-import java.sql.*;
+package main.java;
+import  java.sql.*;
 
 public class DictionaryDAO {
     private  String url;
