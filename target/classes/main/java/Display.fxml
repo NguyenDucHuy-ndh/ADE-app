@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import java.net.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.image.*?>
@@ -12,21 +14,89 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-border-image-source: url('C:/Users/Admin/Desktop/COURSES/OOP_JAVA/ADE-app/src/main/java/Resource/Image/blue');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.Display">
    <children>
-      <BorderPane prefHeight="200.0" prefWidth="200.0">
-         <top>
-            <VBox prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: #3366CC;" BorderPane.alignment="CENTER">
+      <ImageView fitHeight="834.0" fitWidth="1281.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resource/Image/blue.jpg" />
+         </image>
+      </ImageView>
+      <BorderPane layoutY="-7.0" prefHeight="720.0" prefWidth="1080.0">
+         <left>
+            <VBox prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button defaultButton="true" mnemonicParsing="false" prefHeight="71.0" prefWidth="212.0" text="Home">
-                     <graphic>
-                        <ImageView fitHeight="61.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Resource/Image/home.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children></VBox>
-         </top>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="account" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Account">
+                           <graphic>
+                              <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Resource/Image/user.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="home" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="HOME">
+                           <graphic>
+                              <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Resource/Image/home-button.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="sear" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="SEARCH">
+                           <graphic>
+                              <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Resource/Image/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="about" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="ABOUT">
+                           <graphic>
+                              <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Resource/Image/about.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="exist" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="EXIST">
+                           <graphic>
+                              <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Resource/Image/emergency-exit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="140.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
       </BorderPane>
    </children>
 

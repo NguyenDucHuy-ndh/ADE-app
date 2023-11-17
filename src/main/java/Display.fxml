@@ -54,9 +54,9 @@
                   </HBox>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="search" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="SEARCH">
+                        <Button fx:id="sear" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="SEARCH">
                            <graphic>
-                              <ImageView fx:id="search" fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@Resource/Image/search.png" />
                                  </image>

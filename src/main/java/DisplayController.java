@@ -5,11 +5,14 @@
 package main.java;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import java.awt.event.ActionEvent;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class DisplayController {
+public class DisplayController implements Initializable {
 
     @FXML // fx:id="exist"
     private Button exist; // Value injected by FXMLLoader
@@ -28,6 +31,14 @@ public class DisplayController {
 
     @FXML
     void hand_Clicks(ActionEvent event) {
+
+    }
+
+    public void hand_Clicks(javafx.event.ActionEvent actionEvent) {
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
 }
