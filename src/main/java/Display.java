@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -17,25 +19,27 @@ import java.sql.*;
 import java.util.Objects;
 
 public class Display extends Application {
-    @FXML // fx:id="exist"
-    private Button exist; // Value injected by FXMLLoader
-
-    @FXML // fx:id="sear"
-    private Button sear; // Value injected by FXMLLoader
-
-    @FXML // fx:id="about"
-    private Button about; // Value injected by FXMLLoader
-
-    @FXML // fx:id="account"
-    private Button account; // Value injected by FXMLLoader
-
-    @FXML // fx:id="home"
-    private Button home; // Value injected by FXMLLoader
-
-    @FXML
-    void hand_Clicks(java.awt.event.ActionEvent event) {
-
-    }
+//    @FXML // fx:id="exist"
+//    private Button exist; // Value injected by FXMLLoader
+//
+//    @FXML // fx:id="sear"
+//    private Button sear; // Value injected by FXMLLoader
+//
+//    @FXML // fx:id="about"
+//    private Button about; // Value injected by FXMLLoader
+//
+//    @FXML // fx:id="account"
+//    private Button account; // Value injected by FXMLLoader
+//
+//    @FXML // fx:id="home"
+//    private Button home; // Value injected by FXMLLoader
+//
+//    @FXML
+//    BorderPane centerBorderPane;
+//    @FXML
+//    void hand_Clicks(java.awt.event.ActionEvent event) {
+//
+//    }
 
     public void hand_Clicks(javafx.event.ActionEvent actionEvent) {
     } public static void main(String[] args) {

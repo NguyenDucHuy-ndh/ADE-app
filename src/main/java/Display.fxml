@@ -12,20 +12,20 @@
 <?import javafx.scene.layout.*?>
 <?import java.net.URL?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-border-image-source: url('C:/Users/Admin/Desktop/COURSES/OOP_JAVA/ADE-app/src/main/java/Resource/Image/blue');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.Display">
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-border-image-source: url('C:/Users/Admin/Desktop/COURSES/OOP_JAVA/ADE-app/src/main/java/Resource/Image/blue');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.DisplayController">
    <children>
       <ImageView fitHeight="834.0" fitWidth="1281.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Resource/Image/blue.jpg" />
          </image>
       </ImageView>
-      <BorderPane layoutY="-7.0" prefHeight="720.0" prefWidth="1080.0">
+      <BorderPane fx:id="sear" layoutY="-7.0" prefHeight="720.0" prefWidth="1080.0">
          <left>
             <VBox prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="account" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Account">
+                        <Button fx:id="account" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Account">
                            <graphic>
                               <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -38,7 +38,7 @@
                   </HBox>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="home" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="HOME">
+                        <Button fx:id="home" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="HOME">
                            <graphic>
                               <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -54,7 +54,7 @@
                   </HBox>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="sear" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="SEARCH">
+                        <Button mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="SEARCH">
                            <graphic>
                               <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -67,7 +67,7 @@
                   </HBox>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="about" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="ABOUT">
+                        <Button fx:id="about" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="ABOUT">
                            <graphic>
                               <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -80,7 +80,7 @@
                   </HBox>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="exist" mnemonicParsing="false" onAction="#hand_Clicks" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="EXIST">
+                        <Button fx:id="exist" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="EXIST">
                            <graphic>
                               <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
