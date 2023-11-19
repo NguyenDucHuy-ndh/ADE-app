@@ -22,18 +22,18 @@ import java.util.ResourceBundle;
 
 public class home implements Initializable {
 
-    @FXML
-    private JFXTextArea thankText;
-
-    @FXML
-    protected void setLinkGit(ActionEvent actionEvent) throws URISyntaxException, IOException {
-        Desktop.getDesktop().browse(new URI("https://github.com/NguyenDucHuy-ndh/ADE-app"));
-    }
-
-    public home() throws IOException{}
-
-    @Override
+//    @FXML
+//    private JFXTextArea thankText;
+//
+//    @FXML
+//    protected void setLinkGit(ActionEvent actionEvent) throws URISyntaxException, IOException {
+//        Desktop.getDesktop().browse(new URI("https://github.com/NguyenDucHuy-ndh/ADE-app"));
+//    }
+//
+//    public home() throws IOException{}
+//
+//    @Override
     public void initialize(URL location, ResourceBundle resources) {
-        thankText.setEditable(false);
+//        thankText.setEditable(false);
     }
 }
