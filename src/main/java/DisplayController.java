@@ -50,10 +50,6 @@ public class DisplayController implements Initializable {
         }
     }
 
-
-//    public void hand_Clicks(javafx.event.ActionEvent actionEvent) {
-//
-//    }
     public void search(ActionEvent event) throws IOException {
         try {
             // Load the FXML file
