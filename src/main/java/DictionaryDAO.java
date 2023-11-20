@@ -1,5 +1,9 @@
 package main.java;
-import  java.sql.*;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
+import java.sql.*;
 
 public class DictionaryDAO {
     private  String url;
@@ -12,12 +16,13 @@ public class DictionaryDAO {
         this.password = password;
     }
 
-    public void addWord(String wordTarget, String wordExplain) {
+    public void addWord(String wordTarget, String description, String wordExplain) {
         try (Connection connect = DriverManager.getConnection(url, username, password)) {
-            String query = "INSERT INTO mywords (wordTarget, wordExplain) VALUES (?, ?)";
+            String query = "INSERT INTO mywords (wordTarget, description, wordExplain) VALUES (?, ?, ?)";
             try (PreparedStatement statement = connect.prepareStatement(query)) {
                 statement.setString(1, wordTarget);
-                statement.setString(2, wordExplain);
+                statement.setString(2, description);
+                statement.setString(3, wordExplain);
                 statement.executeUpdate();
             }
         } catch (SQLException e) {
@@ -45,8 +50,9 @@ public class DictionaryDAO {
                 try (ResultSet resultSet = statement.executeQuery()) {
                     while (resultSet.next()) {
                         String _wordTarget = resultSet.getString("wordTarget");
+                        String _description = resultSet.getString("description");
                         String _wordExplain = resultSet.getString("wordExplain");
-                        System.out.println(_wordTarget + " - " + _wordExplain);
+                        System.out.println(_wordTarget + " - " + _description + " - " + _wordExplain);
                     }
                 }
             }
@@ -55,6 +61,29 @@ public class DictionaryDAO {
         }
     }
 
+    public String[] getWordInfo(String wordTarget) {
+        try (Connection connect = DriverManager.getConnection(url, username, password)) {
+            String query = "SELECT wordTarget, description, wordExplain FROM mywords WHERE wordTarget LIKE ?";
+            try (PreparedStatement statement = connect.prepareStatement(query)) {
+                statement.setString(1, wordTarget + "%");
+                try (ResultSet resultSet = statement.executeQuery()) {
+                    if (resultSet.next()) {
+                        String[] wordInfo = new String[3];
+                        wordInfo[0] = resultSet.getString("wordTarget");
+                        wordInfo[1] = resultSet.getString("description");
+                        wordInfo[2] = resultSet.getString("wordExplain");
+                        return wordInfo;
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return null;
+    }
+
+
+
     public void showAll() {
         try (Connection connect = DriverManager.getConnection(url, username, password)) {
             String query = "SELECT * FROM mywords";
@@ -62,8 +91,9 @@ public class DictionaryDAO {
                 try (ResultSet resultSet = statement.executeQuery(query)) {
                     while (resultSet.next()) {
                         String _wordTarget = resultSet.getString("wordTarget");
+                        String _description = resultSet.getString("description");
                         String _wordExplain = resultSet.getString("wordExplain");
-                        System.out.println(_wordTarget + " - " + _wordExplain);
+                        System.out.println(_wordTarget + " - " + _description + " - " + _wordExplain);
                     }
                 }
             }
@@ -72,5 +102,27 @@ public class DictionaryDAO {
         }
     }
 
+
+    public ObservableList<String> searchWord2(String searchWord) {
+        ObservableList<String> searchResults = FXCollections.observableArrayList();
+
+        try (Connection connect = DriverManager.getConnection(url, username, password)) {
+            String query = "SELECT wordTarget FROM mywords WHERE wordTarget LIKE ?";
+            try (PreparedStatement statement = connect.prepareStatement(query)) {
+                statement.setString(1, searchWord + "%");
+
+                try (ResultSet resultSet = statement.executeQuery()) {
+                    while (resultSet.next()) {
+                        String wordTarget = resultSet.getString("wordTarget");
+                        searchResults.add(wordTarget);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return searchResults;
+    }
 }
 
