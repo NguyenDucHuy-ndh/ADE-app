@@ -87,6 +87,10 @@ public class DisplayController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    /**
+     * @param actionEvent .
+     */
     public void home (javafx.event.ActionEvent actionEvent) {
         try {
             // Load the FXML file
@@ -101,6 +105,16 @@ public class DisplayController implements Initializable {
         try {
             // Load the FXML file
             AnchorPane view = FXMLLoader.load(getClass().getResource("Account.fxml"));
+            // Set the loaded view to the center of the BorderPane
+            sear.setRight(view);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void about (javafx.event.ActionEvent actionEvent) {
+        try {
+            // Load the FXML file
+            AnchorPane view = FXMLLoader.load(getClass().getResource("About.fxml"));
             // Set the loaded view to the center of the BorderPane
             sear.setRight(view);
         } catch (Exception e) {
