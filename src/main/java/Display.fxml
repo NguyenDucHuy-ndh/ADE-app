@@ -46,7 +46,7 @@
                         </Button>
                      </children>
                      <VBox.margin>
-                        <Insets top="50.0" />
+                        <Insets top="40.0" />
                      </VBox.margin>
                   </HBox>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -59,6 +59,9 @@
                                  </image>
                               </ImageView>
                            </graphic>
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
                         </Button>
                      </children>
                   </HBox>
@@ -72,6 +75,25 @@
                                  </image>
                               </ImageView>
                            </graphic>
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="about1" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Translate">
+                           <graphic>
+                              <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Resource/Image/translate.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
                         </Button>
                      </children>
                   </HBox>
@@ -88,7 +110,7 @@
                         </Button>
                      </children>
                      <VBox.margin>
-                        <Insets top="140.0" />
+                        <Insets bottom="20.0" top="50.0" />
                      </VBox.margin>
                   </HBox>
                </children>

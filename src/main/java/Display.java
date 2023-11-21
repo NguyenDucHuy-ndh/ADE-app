@@ -27,6 +27,7 @@ public class Display extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("Display.fxml"));
         primaryStage.setTitle("Dictionary App");
         Scene scene = new Scene(root);
+        //primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("Image/book.png")));
         primaryStage.setScene(scene);
         primaryStage.show();
 
