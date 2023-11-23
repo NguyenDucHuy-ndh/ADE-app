@@ -24,8 +24,17 @@
          <center>
             <AnchorPane prefHeight="450.0" prefWidth="410.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="meaning" layoutX="10.0" layoutY="119.0" prefHeight="200.0" prefWidth="460.0" style="-fx-background-color: white;" textAlignment="JUSTIFY" />
-                  <Label fx:id="description" layoutX="10.0" layoutY="369.0" prefHeight="270.0" prefWidth="460.0" style="-fx-background-color: white;" textAlignment="JUSTIFY" />
+                  <Label fx:id="meaning" alignment="TOP_LEFT" layoutX="10.0" layoutY="119.0" prefHeight="150.0" prefWidth="446.0" style="-fx-background-color: white;" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Arial Bold Italic" size="16.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></Label>
+                  <Label fx:id="description" alignment="TOP_LEFT" layoutX="10.0" layoutY="369.0" prefHeight="166.0" prefWidth="446.0" style="-fx-background-color: white;" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Arial Bold Italic" size="16.0" />
+                     </font></Label>
                   <Button layoutX="323.0" layoutY="14.0" minWidth="42.0" mnemonicParsing="false" onAction="#speak" prefHeight="53.0" prefWidth="86.0" stylesheets="@style.css">
                      <graphic>
                         <ImageView fitHeight="24.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">

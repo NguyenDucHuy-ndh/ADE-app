@@ -40,6 +40,6 @@
             </ImageView>
          </graphic>
       </Button>
-      <BorderPane fx:id="loadAbout" layoutY="236.0" prefHeight="505.0" prefWidth="720.0" />
+      <BorderPane fx:id="loadAbout" layoutY="177.0" prefHeight="565.0" prefWidth="720.0" />
    </children>
 </AnchorPane>

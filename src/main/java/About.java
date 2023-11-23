@@ -45,6 +45,13 @@ public class About implements Initializable {
     }
 
     public void add(ActionEvent actionEvent) {
+        try {
+            AnchorPane view = FXMLLoader.load(getClass().getResource("Add.fxml"));
+            loadAbout.setRight(view);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

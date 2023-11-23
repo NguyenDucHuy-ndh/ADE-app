@@ -40,7 +40,7 @@ public class Search implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Khởi tạo đối tượng DictionaryDAO với các thông số kết nối
-        dictionaryDAO = new DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "123456");
+        dictionaryDAO = new DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "dung1asdf");
 
         // Thêm sự kiện khi ấn Enter trong ô tìm kiếm
         searchText.setOnKeyPressed(event -> {
