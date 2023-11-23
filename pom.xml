@@ -37,5 +37,22 @@
             <version>9.0.10</version>
         </dependency>
 
+        <dependency>
+            <groupId>darkprograms</groupId>
+            <artifactId>ttslib</artifactId>
+            <version>1.0.0</version> <!-- Thay phiên bản thực tế nếu cần -->
+        </dependency>
+
+        <dependency>
+            <groupId>javazoom</groupId>
+            <artifactId>jlayer</artifactId>
+            <version>1.0.1</version> <!-- Thay phiên bản thực tế nếu cần -->
+        </dependency>
+        <dependency>
+            <groupId>com.github.goxr3plus</groupId>
+            <artifactId>java-google-speech-api</artifactId>
+            <version>8.0.0</version>
+        </dependency>
+
     </dependencies>
 </project>
