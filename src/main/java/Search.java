@@ -3,6 +3,7 @@ package main.java;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -34,13 +35,12 @@ public class Search implements Initializable {
     @FXML
     private ListView<String> listEnglish;
 
-    // Giả sử bạn có một đối tượng DictionaryDAO
     private DictionaryDAO dictionaryDAO;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Khởi tạo đối tượng DictionaryDAO với các thông số kết nối
-        dictionaryDAO = new DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "dung1asdf");
+        dictionaryDAO = new DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "123456");
 
         // Thêm sự kiện khi ấn Enter trong ô tìm kiếm
         searchText.setOnKeyPressed(event -> {
@@ -90,4 +90,12 @@ public class Search implements Initializable {
             description.setText("Nghĩa: " + wordInfo[2]); // Giả sử miêu tả là phần thứ ba
         });
     }
+
+    @FXML
+    void speak(ActionEvent event) {
+        String speakWord = meaning.getText().trim();
+        TextToSpeech tts = new TextToSpeech();
+        tts.speak(speakWord, "vi", 1.0);
+    }
+
 }

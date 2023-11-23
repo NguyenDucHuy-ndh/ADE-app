@@ -16,10 +16,10 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
 public class TextToSpeech {
     private final SynthesiserV2 synthesiser;
 
-    public static void main(String[] args) {
-        TextToSpeech tts = new TextToSpeech();
-        tts.speak("Xin chào, tôi là trợ lý ảo của bạn", "vi", 1.0);
-    }
+//    public static void main(String[] args) {
+//        TextToSpeech tts = new TextToSpeech();
+//        tts.speak("Xin chào, tôi là trợ lý ảo của bạn", "vi", 1.0);
+//    }
 
     private class TextToSpeechThread implements Runnable {
         private String text;

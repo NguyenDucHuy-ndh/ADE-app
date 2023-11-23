@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.Search">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.Search">
    <children>
       <ImageView fitHeight="720.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -26,7 +26,7 @@
                <children>
                   <Label fx:id="meaning" layoutX="10.0" layoutY="119.0" prefHeight="200.0" prefWidth="460.0" style="-fx-background-color: white;" textAlignment="JUSTIFY" />
                   <Label fx:id="description" layoutX="10.0" layoutY="369.0" prefHeight="270.0" prefWidth="460.0" style="-fx-background-color: white;" textAlignment="JUSTIFY" />
-                  <Button layoutX="323.0" layoutY="14.0" minWidth="42.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="86.0" stylesheets="@style.css">
+                  <Button layoutX="323.0" layoutY="14.0" minWidth="42.0" mnemonicParsing="false" onAction="#speak" prefHeight="53.0" prefWidth="86.0" stylesheets="@style.css">
                      <graphic>
                         <ImageView fitHeight="24.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                            <image>

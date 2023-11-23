@@ -1,37 +1,27 @@
 package main.java;
 
-import java.io.BufferedReader;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLEncoder;
 
 public class Translate {
 
-    public static void main(String[] args) throws IOException {
-        String text = "Hello world!";
-        //Translated text: Hallo Welt!
-        System.out.println("Translated text: " + translate("en", "de", text));
-    }
+    @FXML
+    private TextField vanBan;
 
-    private static String translate(String langFrom, String langTo, String text) throws IOException {
-        // INSERT YOU URL HERE
-        String urlStr = "https://your.google.script.url" +
-                "?q=" + URLEncoder.encode(text, "UTF-8") +
-                "&target=" + langTo +
-                "&source=" + langFrom;
-        URL url = new URL(urlStr);
-        StringBuilder response = new StringBuilder();
-        HttpURLConnection con = (HttpURLConnection) url.openConnection();
-        con.setRequestProperty("User-Agent", "Mozilla/5.0");
-        BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-        String inputLine;
-        while ((inputLine = in.readLine()) != null) {
-            response.append(inputLine);
-        }
-        in.close();
-        return response.toString();
+    @FXML
+    private Label banDich;
+
+    @FXML
+    void translateApi(ActionEvent event) throws IOException {
+        String text = vanBan.getText().trim();
+
+        String result = TextToText.translate("en", "vi", text);
+
+        banDich.setText(result);
     }
 
 }
