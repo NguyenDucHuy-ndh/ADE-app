@@ -22,7 +22,7 @@
                <children>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="account" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Account">
+                        <Button mnemonicParsing="false" onAction="#account" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Account">
                            <graphic>
                               <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
