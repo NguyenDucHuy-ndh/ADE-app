@@ -123,4 +123,9 @@ public class DisplayController implements Initializable {
     }
 
 
+    public void exist(ActionEvent actionEvent) {
+    }
+
+    public void translate(ActionEvent actionEvent) {
+    }
 }

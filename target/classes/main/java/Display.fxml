@@ -67,7 +67,7 @@
                   </HBox>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="about" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="ABOUT">
+                        <Button mnemonicParsing="false" onAction="#about" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="ABOUT">
                            <graphic>
                               <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -83,7 +83,7 @@
                   </HBox>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="about1" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Translate">
+                        <Button mnemonicParsing="false" onAction="#translate" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Translate">
                            <graphic>
                               <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -99,7 +99,7 @@
                   </HBox>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="exist" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="EXIST">
+                        <Button fx:id="exist" mnemonicParsing="false" onAction="#exist" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="EXIST">
                            <graphic>
                               <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
