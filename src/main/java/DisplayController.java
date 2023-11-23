@@ -127,5 +127,13 @@ public class DisplayController implements Initializable {
     }
 
     public void translate(ActionEvent actionEvent) {
+        try {
+            // Load the FXML file
+            AnchorPane view = FXMLLoader.load(getClass().getResource("Translate.fxml"));
+            // Set the loaded view to the center of the BorderPane
+            sear.setRight(view);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

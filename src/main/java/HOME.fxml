@@ -19,12 +19,12 @@
             <Font name="System Bold Italic" size="36.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="443.0" prefHeight="98.0" prefWidth="250.0" stylesheets="@home.css" text="- Nguyễn Đức Huy" textAlignment="CENTER" textFill="#ffe083">
+      <Label alignment="CENTER" layoutX="14.0" layoutY="443.0" prefHeight="98.0" prefWidth="250.0" stylesheets="@Resource/css/home.css" text="- Nguyễn Đức Huy" textAlignment="CENTER" textFill="#ffe083">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="21.0" layoutY="377.0" prefHeight="98.0" prefWidth="250.0" stylesheets="@home.css" text="- Nguyễn Tiến Dũng" textAlignment="CENTER" textFill="#ffe083">
+      <Label alignment="CENTER" layoutX="21.0" layoutY="377.0" prefHeight="98.0" prefWidth="250.0" stylesheets="@Resource/css/home.css" text="- Nguyễn Tiến Dũng" textAlignment="CENTER" textFill="#ffe083">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
@@ -34,12 +34,12 @@
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="11.0" layoutY="506.0" prefHeight="98.0" prefWidth="250.0" stylesheets="@home.css" text="- Quách Việt Anh" textAlignment="CENTER" textFill="#ffe083">
+      <Label alignment="CENTER" layoutX="11.0" layoutY="506.0" prefHeight="98.0" prefWidth="250.0" stylesheets="@Resource/css/home.css" text="- Quách Việt Anh" textAlignment="CENTER" textFill="#ffe083">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Button layoutX="608.0" layoutY="462.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="88.0" stylesheets="@home.css">
+      <Button layoutX="608.0" layoutY="462.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="88.0" stylesheets="@Resource/css/home.css">
          <graphic>
             <ImageView fitHeight="48.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
                <image>
