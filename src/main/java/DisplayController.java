@@ -47,31 +47,7 @@ public class DisplayController implements Initializable {
     @FXML
     private BorderPane B_pane;
 
-//    @FXML
-//    public void hand_Clicks(ActionEvent event) throws IOException {
-//        try {
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("search.fxml"));
-//            Parent root = loader.load();
-//            Stage stage = new Stage();
-//            stage.setScene(new Scene(root));
-//            stage.show();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//
-//
-//    public void search(ActionEvent event) throws IOException {
-//        try {
-//            // Load the FXML file
-//            Parent view = FXMLLoader.load(getClass().getResource("search.fxml"));
-//            // Set the loaded view to the center of the BorderPane
-//            sear.setCenter(view);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
