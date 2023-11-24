@@ -56,5 +56,12 @@ public class About implements Initializable {
 
 
     public void delete(ActionEvent actionEvent) {
+        try {
+            AnchorPane view = FXMLLoader.load(getClass().getResource("Delete.fxml"));
+            loadAbout.setRight(view);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
