@@ -10,7 +10,7 @@
     <children>
         <ImageView fitHeight="565.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@Resource/Image/background%20edit.jpg" />
+                <Image url="@Image/background%20edit.jpg" />
             </image>
         </ImageView>
       <TextField layoutX="37.0" layoutY="31.0" prefHeight="60.0" prefWidth="261.0" promptText="Nhập từ bạn muốn chỉnh sửa...">

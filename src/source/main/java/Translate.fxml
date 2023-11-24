@@ -14,7 +14,7 @@
    <children>
       <ImageView fitHeight="720.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Resource/Image/wavy-blue-background.jpg" />
+            <Image url="@Image/wavy-blue-background.jpg" />
          </image>
       </ImageView>
       <VBox layoutX="10.0" layoutY="10.0" prefHeight="720.0" prefWidth="690.0">

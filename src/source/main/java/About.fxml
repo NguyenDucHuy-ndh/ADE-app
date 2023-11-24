@@ -10,14 +10,14 @@
    <children>
       <ImageView fitHeight="720.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Resource/Image/blue - About.jpg" />
+            <Image url="@Image/blue - About.jpg" />
          </image>
       </ImageView>
       <Button layoutX="43.0" layoutY="53.0" mnemonicParsing="false" onAction="#edit" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Edit">
          <graphic>
             <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Resource/Image/edit.png" />
+                  <Image url="@Image/edit.png" />
                </image>
             </ImageView>
          </graphic>
@@ -26,7 +26,7 @@
          <graphic>
             <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Resource/Image/add.png" />
+                  <Image url="@Image/add.png" />
                </image>
             </ImageView>
          </graphic>
@@ -35,7 +35,7 @@
          <graphic>
             <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Resource/Image/delete.png" />
+                  <Image url="@Image/delete.png" />
                </image>
             </ImageView>
          </graphic>

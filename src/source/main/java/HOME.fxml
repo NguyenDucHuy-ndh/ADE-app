@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="774.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Resource/Image/blue - Copy.jpg" />
+            <Image url="@Image/blue - Copy.jpg" />
          </image>
       </ImageView>
       <Label alignment="CENTER" layoutX="150.0" layoutY="36.0" prefHeight="98.0" prefWidth="420.0" text="HOME" textAlignment="CENTER" textFill="#00f729">
@@ -19,12 +19,12 @@
             <Font name="System Bold Italic" size="36.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="443.0" prefHeight="98.0" prefWidth="250.0" stylesheets="@Resource/css/home.css" text="- Nguyễn Đức Huy" textAlignment="CENTER" textFill="#ffe083">
+      <Label alignment="CENTER" layoutX="14.0" layoutY="443.0" prefHeight="98.0" prefWidth="250.0" stylesheets="@css/home.css" text="- Nguyễn Đức Huy" textAlignment="CENTER" textFill="#ffe083">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="21.0" layoutY="377.0" prefHeight="98.0" prefWidth="250.0" stylesheets="@Resource/css/home.css" text="- Nguyễn Tiến Dũng" textAlignment="CENTER" textFill="#ffe083">
+      <Label alignment="CENTER" layoutX="21.0" layoutY="377.0" prefHeight="98.0" prefWidth="250.0" stylesheets="@css/home.css" text="- Nguyễn Tiến Dũng" textAlignment="CENTER" textFill="#ffe083">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
@@ -34,16 +34,16 @@
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="11.0" layoutY="506.0" prefHeight="98.0" prefWidth="250.0" stylesheets="@Resource/css/home.css" text="- Quách Việt Anh" textAlignment="CENTER" textFill="#ffe083">
+      <Label alignment="CENTER" layoutX="11.0" layoutY="506.0" prefHeight="98.0" prefWidth="250.0" stylesheets="@css/home.css" text="- Quách Việt Anh" textAlignment="CENTER" textFill="#ffe083">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Button layoutX="608.0" layoutY="462.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="88.0" stylesheets="@Resource/css/home.css">
+      <Button layoutX="608.0" layoutY="462.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="88.0" stylesheets="@css/home.css">
          <graphic>
             <ImageView fitHeight="48.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Resource/Image/github.png" />
+                  <Image url="@Image/github.png" />
                </image>
             </ImageView>
          </graphic>
