@@ -1,0 +1,18 @@
+.label {
+    -fx-font-size: 15px; /* Kích thước font chữ */
+    -fx-text-fill: black; /* Màu chữ */
+    -fx-background-color: #CCFFFF; /* Màu nền */
+    -fx-padding: 5px; /* Độ lề */
+    -fx-border-color: #CC99CC; /* Màu viền */
+    -fx-border-width: 3px; /* Độ dày của viền */
+    -fx-border-radius: 15px; /* Độ cong của góc viền */
+    -fx-background-radius: 15px;
+}
+
+.label:hover {
+    -fx-background-color: #CCFFFF; /* Màu nền khi hover */
+}
+
+.label:pressed {
+    -fx-background-color: #CCFFFF; /* Màu nền khi nhấn giữ */
+}

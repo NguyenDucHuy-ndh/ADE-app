@@ -1,0 +1,20 @@
+.button {
+
+    -fx-text-fill: black;
+    -fx-background-color: #FFFFCC;
+    -fx-effect: dropshadow(three-pass-box, #FFFF66, 20, 0, -10, 15);
+    -fx-font-weight: bold;
+    -fx-background-radius: 20 20 20 20;
+    -fx-padding: 20 20 20 20;
+    -fx-font-size: 16px;
+}
+.button:hover {
+
+    -fx-text-fill: black;
+    -fx-background-color: #FFFF66;
+    -fx-effect: dropshadow(three-pass-box, #FFFFCC, 20, 0, -10, 5);
+    -fx-font-weight: bold;
+    -fx-background-radius: 20 20 20 20;
+    -fx-padding: 20 20 20 20;
+    -fx-font-size: 17px;
+}
