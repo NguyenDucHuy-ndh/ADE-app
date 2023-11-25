@@ -4,6 +4,7 @@
 
 package main.java;
 
+import animatefx.animation.BounceInDown;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,84 +15,61 @@ import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class DisplayController implements Initializable {
 
-
     @FXML
-    private Button Search;
-
-    @FXML
-    private Button about;
-
-    @FXML
-    private Button account;
-
-    @FXML
-    private Button exist;
-
-    @FXML
-    private Button home;
-
-    @FXML
-    private BorderPane sear;
-
-    @FXML
-    private BorderPane B_pane;
+    private StackPane mainFace;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+//        try {
+//            AnchorPane fxml = FXMLLoader.load(getClass().getResource("HOME.fxml"));
+//            mainFace.getChildren().removeAll();
+//            mainFace.getChildren().setAll(fxml);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
-    public void search(javafx.event.ActionEvent actionEvent) {
-        try {
-            // Load the FXML file
-            AnchorPane view = FXMLLoader.load(getClass().getResource("search.fxml"));
-            // Set the loaded view to the center of the BorderPane
-            sear.setRight(view);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void search(javafx.event.ActionEvent actionEvent) throws IOException {
+        AnchorPane fxml = FXMLLoader.load(getClass().getResource("search.fxml"));
+        mainFace.getChildren().removeAll();
+        mainFace.getChildren().setAll(fxml);
+        MyTranslateTransition myTranslateTransition = new MyTranslateTransition(mainFace);
+        myTranslateTransition.playFadeTransition();
     }
 
     /**
      * @param actionEvent .
      */
-    public void home (javafx.event.ActionEvent actionEvent) {
-        try {
-            // Load the FXML file
-            AnchorPane view = FXMLLoader.load(getClass().getResource("HOME.fxml"));
-            // Set the loaded view to the center of the BorderPane
-            sear.setRight(view);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void home (javafx.event.ActionEvent actionEvent) throws IOException {
+        AnchorPane fxml = FXMLLoader.load(getClass().getResource("HOME.fxml"));
+        mainFace.getChildren().removeAll();
+        mainFace.getChildren().setAll(fxml);
+        MyTranslateTransition myTranslateTransition = new MyTranslateTransition(mainFace);
+        myTranslateTransition.playFadeTransition();
     }
-    public  void account (javafx.event.ActionEvent actionEvent) {
-        try {
-            // Load the FXML file
-            AnchorPane view = FXMLLoader.load(getClass().getResource("Account.fxml"));
-            // Set the loaded view to the center of the BorderPane
-            sear.setRight(view);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public  void account (javafx.event.ActionEvent actionEvent) throws IOException{
+        AnchorPane fxml = FXMLLoader.load(getClass().getResource("Account.fxml"));
+        mainFace.getChildren().removeAll();
+        mainFace.getChildren().setAll(fxml);
+        MyTranslateTransition myTranslateTransition = new MyTranslateTransition(mainFace);
+        myTranslateTransition.playFadeTransition();
     }
-    public void about (javafx.event.ActionEvent actionEvent) {
-        try {
-            // Load the FXML file
-            AnchorPane view = FXMLLoader.load(getClass().getResource("About.fxml"));
-            // Set the loaded view to the center of the BorderPane
-            sear.setRight(view);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void about (javafx.event.ActionEvent actionEvent) throws IOException{
+        AnchorPane fxml = FXMLLoader.load(getClass().getResource("About.fxml"));
+        mainFace.getChildren().removeAll();
+        mainFace.getChildren().setAll(fxml);
+        MyTranslateTransition myTranslateTransition = new MyTranslateTransition(mainFace);
+        myTranslateTransition.playFadeTransition();
     }
 
 
@@ -108,14 +86,12 @@ public class DisplayController implements Initializable {
         }
     }
 
-    public void translate(ActionEvent actionEvent) {
-        try {
-            // Load the FXML file
-            AnchorPane view = FXMLLoader.load(getClass().getResource("Translate.fxml"));
-            // Set the loaded view to the center of the BorderPane
-            sear.setRight(view);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void translate(ActionEvent actionEvent) throws IOException{
+        AnchorPane fxml = FXMLLoader.load(getClass().getResource("Translate.fxml"));
+        mainFace.getChildren().removeAll();
+        mainFace.getChildren().setAll(fxml);
+        MyTranslateTransition myTranslateTransition = new MyTranslateTransition(mainFace);
+        myTranslateTransition.playFadeTransition();
     }
+
 }

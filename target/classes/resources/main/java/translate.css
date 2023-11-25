@@ -1,0 +1,28 @@
+.text-field {
+    -fx-background-color: #CCFFFF;
+    -fx-text-fill: black;
+    -fx-border-width: 4px;
+    -fx-border-color: #FFCC66;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+.text-field:hover {
+    -fx-border-color: #00FFFF;
+    -fx-border-width: 4px;
+    -fx-text-fill: black;
+}
+
+.text-field:focused {
+    -fx-border-color: #00FFFF;
+    -fx-background-color: #CCFFFF;
+    -fx-text-fill: black;
+    -fx-border-width: 4px;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+.text-field:focused:hover {
+    -fx-border-color: #00FFFF;
+    -fx-border-width: 4px;
+}
