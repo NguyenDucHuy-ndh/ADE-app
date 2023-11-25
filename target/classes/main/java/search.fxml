@@ -8,79 +8,64 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.Search">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.Search">
    <children>
-      <ImageView fitHeight="720.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="640.0" fitWidth="880.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/blue-search.jpg" />
          </image>
       </ImageView>
-      <BorderPane fx:id="B_pane" layoutX="10.0" layoutY="10.0" prefHeight="680.0" prefWidth="720.0">
-         <center>
-            <AnchorPane prefHeight="450.0" prefWidth="410.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Label fx:id="meaning" alignment="TOP_LEFT" layoutX="10.0" layoutY="119.0" prefHeight="150.0" prefWidth="446.0" stylesheets="@search.css" textAlignment="JUSTIFY">
-                     <font>
-                        <Font name="Arial Bold Italic" size="16.0" />
-                     </font>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets></Label>
-                  <Label fx:id="description" alignment="TOP_LEFT" layoutX="10.0" layoutY="369.0" prefHeight="166.0" prefWidth="446.0" stylesheets="@search.css" textAlignment="JUSTIFY">
-                     <font>
-                        <Font name="Arial Bold Italic" size="16.0" />
-                     </font></Label>
-                  <Button layoutX="317.0" layoutY="15.0" minWidth="42.0" mnemonicParsing="false" onAction="#speak" prefHeight="62.0" prefWidth="101.0" stylesheets="@button_search.css" text="Sound">
-                     <graphic>
-                        <ImageView fitHeight="28.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Image/play.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font name="Arial Bold Italic" size="13.0" />
-                     </font>
-                  </Button>
-                  <Label layoutX="14.0" layoutY="27.0" prefHeight="50.0" prefWidth="238.0" stylesheets="@search.css">
-                     <font>
-                        <Font name="Arial Bold Italic" size="15.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </center>
-         <top>
-            <StackPane prefHeight="65.0" prefWidth="720.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Label fx:id="grammarLabel" prefHeight="36.0" prefWidth="208.0" text="Dictionary Search" textAlignment="CENTER" textFill="#00f729">
-                     <font>
-                        <Font name="System Bold Italic" size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </StackPane>
-         </top>
-         <left>
-            <VBox prefHeight="614.0" prefWidth="226.0" BorderPane.alignment="CENTER">
-               <children>
-                  <TextField fx:id="searchText" prefHeight="45.0" prefWidth="215.0" promptText="Find word..." stylesheets="@translate.css">
-                     <VBox.margin>
-                        <Insets bottom="20.0" top="20.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <ListView fx:id="listEnglish" fixedCellSize="30.0" prefHeight="396.0" prefWidth="226.0" style="-fx-background-radius: 25; -fx-padding: 10; -fx-background-color: #FFFFCC; -fx-border-radius: 25; -fx-border-width: 4; -fx-border-color: #33FFFF;" />
-               </children>
-               <BorderPane.margin>
-                  <Insets left="10.0" right="10.0" />
-               </BorderPane.margin>
-            </VBox>
-         </left>
-      </BorderPane>
+      <AnchorPane layoutX="387.0" layoutY="101.0" prefHeight="522.0" prefWidth="478.0">
+         <children>
+            <Label fx:id="meaning" alignment="TOP_LEFT" layoutX="10.0" layoutY="119.0" prefHeight="150.0" prefWidth="446.0" stylesheets="@search.css" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Arial Bold Italic" size="16.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label fx:id="description" alignment="TOP_LEFT" layoutX="13.0" layoutY="307.0" prefHeight="166.0" prefWidth="446.0" stylesheets="@search.css" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Arial Bold Italic" size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="317.0" layoutY="15.0" minWidth="42.0" mnemonicParsing="false" onAction="#speak" prefHeight="62.0" prefWidth="101.0" stylesheets="@button_search.css" text="Sound">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/play.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Arial Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="14.0" layoutY="27.0" prefHeight="50.0" prefWidth="238.0" stylesheets="@search.css">
+               <font>
+                  <Font name="Arial Bold Italic" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="105.0" layoutY="107.0" prefHeight="510.0" prefWidth="245.0">
+         <children>
+            <TextField fx:id="searchText" prefHeight="45.0" prefWidth="215.0" promptText="Find word..." stylesheets="@translate.css">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <ListView fx:id="listEnglish" fixedCellSize="30.0" prefHeight="396.0" prefWidth="226.0" style="-fx-background-radius: 25; -fx-padding: 10; -fx-background-color: #FFFFCC; -fx-border-radius: 25; -fx-border-width: 4; -fx-border-color: #33FFFF;" />
+         </children>
+      </VBox>
+      <Label fx:id="grammarLabel" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="36.0" prefWidth="849.0" text="Dictionary Search" textAlignment="CENTER" textFill="#00f729">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 
 import java.awt.*;
 import java.io.IOException;
@@ -24,7 +25,7 @@ public class About implements Initializable {
     private Button edit;
 
     @FXML
-    private BorderPane loadAbout;
+    private StackPane loadAbout;
 
 
     @Override
@@ -35,7 +36,10 @@ public class About implements Initializable {
     public void edit(ActionEvent actionEvent) throws IOException {
         try {
             AnchorPane view = FXMLLoader.load(getClass().getResource("Edit.fxml"));
-            loadAbout.setRight(view);
+            loadAbout.getChildren().removeAll();
+            loadAbout.getChildren().setAll(view);
+            MyTranslateTransition myTranslateTransition = new MyTranslateTransition(loadAbout);
+            myTranslateTransition.playFadeTransition();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -45,7 +49,10 @@ public class About implements Initializable {
     public void add(ActionEvent actionEvent) {
         try {
             AnchorPane view = FXMLLoader.load(getClass().getResource("Add.fxml"));
-            loadAbout.setRight(view);
+            loadAbout.getChildren().removeAll();
+            loadAbout.getChildren().setAll(view);
+            MyTranslateTransition myTranslateTransition = new MyTranslateTransition(loadAbout);
+            myTranslateTransition.playFadeTransition();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -56,7 +63,10 @@ public class About implements Initializable {
     public void delete(ActionEvent actionEvent) {
         try {
             AnchorPane view = FXMLLoader.load(getClass().getResource("Delete.fxml"));
-            loadAbout.setRight(view);
+            loadAbout.getChildren().removeAll();
+            loadAbout.getChildren().setAll(view);
+            MyTranslateTransition myTranslateTransition = new MyTranslateTransition(loadAbout);
+            myTranslateTransition.playFadeTransition();
 
         } catch (IOException e) {
             e.printStackTrace();

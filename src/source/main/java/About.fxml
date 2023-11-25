@@ -4,16 +4,16 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
 
-<AnchorPane prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.About">
+<AnchorPane prefHeight="640.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.About">
    <children>
-      <ImageView fitHeight="720.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="640.0" fitWidth="880.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Image/blue - About.jpg" />
+            <Image url="@Image/blue%20-%20Copy.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="43.0" layoutY="53.0" mnemonicParsing="false" onAction="#edit" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Edit">
+      <Button layoutX="268.0" layoutY="22.0" mnemonicParsing="false" onAction="#edit" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Edit">
          <graphic>
             <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -22,7 +22,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="277.0" layoutY="53.0" mnemonicParsing="false" onAction="#add" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Add">
+      <Button layoutX="474.0" layoutY="22.0" mnemonicParsing="false" onAction="#add" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Add">
          <graphic>
             <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -31,7 +31,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="514.0" layoutY="53.0" mnemonicParsing="false" onAction="#delete" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Delete">
+      <Button layoutX="677.0" layoutY="22.0" mnemonicParsing="false" onAction="#delete" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Delete">
          <graphic>
             <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -40,6 +40,15 @@
             </ImageView>
          </graphic>
       </Button>
-      <BorderPane fx:id="loadAbout" layoutY="177.0" prefHeight="565.0" prefWidth="720.0" />
+      <StackPane fx:id="loadAbout" layoutY="140.0" prefHeight="500.0" prefWidth="880.0" />
+      <Button layoutX="56.0" layoutY="22.0" mnemonicParsing="false" onAction="#delete" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Game">
+         <graphic>
+            <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/game.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

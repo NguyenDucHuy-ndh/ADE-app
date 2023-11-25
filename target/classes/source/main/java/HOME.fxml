@@ -7,39 +7,39 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.home">
+<AnchorPane prefHeight="640.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.home">
    <children>
-      <ImageView fitHeight="774.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="651.0" fitWidth="880.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Image/blue - Copy.jpg" />
+            <Image url="@Image/blue%20-%20Copy.jpg" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="150.0" layoutY="36.0" prefHeight="98.0" prefWidth="420.0" text="HOME" textAlignment="CENTER" textFill="#00f729">
+      <Label alignment="CENTER" layoutX="150.0" layoutY="36.0" prefHeight="98.0" prefWidth="617.0" text="HOME" textAlignment="CENTER" textFill="#00f729">
          <font>
             <Font name="System Bold Italic" size="36.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="443.0" prefHeight="98.0" prefWidth="250.0" text="- Nguyễn Đức Huy" textAlignment="CENTER" textFill="#ffe083">
+      <Label alignment="CENTER" layoutX="100.0" layoutY="369.0" prefHeight="98.0" prefWidth="250.0" text="- Nguyễn Đức Huy" textAlignment="CENTER" textFill="#ffe083">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="21.0" layoutY="377.0" prefHeight="98.0" prefWidth="250.0" text="- Nguyễn Tiến Dũng" textAlignment="CENTER" textFill="#ffe083">
+      <Label alignment="CENTER" layoutX="109.0" layoutY="320.0" prefHeight="98.0" prefWidth="250.0" text="- Nguyễn Tiến Dũng" textAlignment="CENTER" textFill="#ffe083">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="311.0" prefHeight="98.0" prefWidth="122.0" text="Made by:" textAlignment="CENTER" textFill="#ffe083">
+      <Label alignment="CENTER" layoutX="98.0" layoutY="228.0" prefHeight="98.0" prefWidth="122.0" text="Made by:" textAlignment="CENTER" textFill="#ffe083">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="11.0" layoutY="506.0" prefHeight="98.0" prefWidth="250.0" text="- Quách Việt Anh" textAlignment="CENTER" textFill="#ffe083">
+      <Label alignment="CENTER" layoutX="96.0" layoutY="418.0" prefHeight="98.0" prefWidth="250.0" text="- Quách Việt Anh" textAlignment="CENTER" textFill="#ffe083">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Button layoutX="526.0" layoutY="397.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="88.0" style="-fx-background-color: #FFFFCC;" stylesheets="@button_search.css">
+      <Button layoutX="673.0" layoutY="357.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="88.0" style="-fx-background-color: #FFFFCC;" stylesheets="@button_search.css">
          <graphic>
             <ImageView fitHeight="48.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
                <image>
