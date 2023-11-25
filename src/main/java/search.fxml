@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.Search">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.Search">
    <children>
       <ImageView fitHeight="720.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -35,7 +35,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Label layoutX="14.0" layoutY="27.0" prefHeight="50.0" prefWidth="238.0" style="-fx-background-color: white;">
+                  <Label fx:id="resource" layoutX="14.0" layoutY="27.0" prefHeight="50.0" prefWidth="238.0" style="-fx-background-color: white;">
                      <font>
                         <Font name="Arial Bold Italic" size="15.0" />
                      </font>

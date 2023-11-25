@@ -30,6 +30,9 @@ public class Search implements Initializable {
     private Label grammarLabel;
 
     @FXML
+    private Label resource;
+
+    @FXML
     private TextField searchText;
 
     @FXML
