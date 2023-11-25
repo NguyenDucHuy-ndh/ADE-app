@@ -24,4 +24,5 @@ public class Translate {
         banDich.setText(result);
     }
 
+
 }

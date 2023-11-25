@@ -13,17 +13,17 @@
                 <Image url="@Image/background%20edit.jpg" />
             </image>
         </ImageView>
-      <TextField layoutX="37.0" layoutY="31.0" prefHeight="60.0" prefWidth="261.0" promptText="Nhập từ bạn muốn chỉnh sửa...">
+      <TextField layoutX="37.0" layoutY="31.0" prefHeight="60.0" prefWidth="261.0" promptText="Nhập từ bạn muốn chỉnh sửa..." style="-fx-background-color: white;" stylesheets="@translate.css">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="37.0" layoutY="213.0" prefHeight="60.0" prefWidth="530.0" promptText="Mô tả bạn mong muốn..,">
+      <TextField layoutX="37.0" layoutY="213.0" prefHeight="60.0" prefWidth="530.0" promptText="Mô tả bạn mong muốn..," style="-fx-background-color: white;" stylesheets="@translate.css">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="37.0" layoutY="116.0" prefHeight="60.0" prefWidth="392.0" promptText="Nghĩa của từ này....">
+      <TextField layoutX="37.0" layoutY="116.0" prefHeight="60.0" prefWidth="392.0" promptText="Nghĩa của từ này...." style="-fx-background-color: white;" stylesheets="@translate.css">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>

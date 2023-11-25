@@ -14,17 +14,17 @@
             <Image url="@Image/background%20add.jpg" />
          </image>
       </ImageView>
-      <TextField layoutX="44.0" layoutY="84.0" prefHeight="60.0" prefWidth="261.0" promptText="Nhập từ bạn muốn thêm..." style="-fx-background-color: white;">
+      <TextField layoutX="44.0" layoutY="84.0" prefHeight="60.0" prefWidth="261.0" promptText="Nhập từ bạn muốn thêm..." stylesheets="@translate.css">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <TextField alignment="TOP_LEFT" layoutX="44.0" layoutY="338.0" prefHeight="170.0" prefWidth="426.0" promptText="Mô tả mà bạn mong muốn..." style="-fx-background-color: white;">
+      <TextField alignment="TOP_LEFT" layoutX="44.0" layoutY="338.0" prefHeight="170.0" prefWidth="426.0" promptText="Mô tả mà bạn mong muốn..." style="-fx-padding: 15;" stylesheets="@translate.css">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="44.0" layoutY="229.0" prefHeight="60.0" prefWidth="390.0" promptText="Nghĩa của từ này là..." style="-fx-background-color: white;">
+      <TextField layoutX="44.0" layoutY="229.0" prefHeight="60.0" prefWidth="390.0" promptText="Nghĩa của từ này là..." stylesheets="@translate.css">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
