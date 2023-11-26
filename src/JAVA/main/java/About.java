@@ -33,6 +33,19 @@ public class About implements Initializable {
     private Button edit;
 
     @FXML
+    private Button animal;
+
+    @FXML
+    private Button items;
+
+    @FXML
+    private StackPane mainGame;
+
+    @FXML
+    private Button plant;
+
+
+    @FXML
     private AnchorPane mainAbout;
 
     @FXML
@@ -179,5 +192,20 @@ public class About implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void animal(ActionEvent actionEvent) {
+        try {
+            AnchorPane view = FXMLLoader.load(getClass().getResource("Animal.fxml"));
+            mainGame.getChildren().removeAll();
+            mainGame.getChildren().setAll(view);
+            new BounceInUp(mainGame).play();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public void plant(ActionEvent actionEvent) {
+    }
+    public void items(ActionEvent actionEvent) {
     }
 }

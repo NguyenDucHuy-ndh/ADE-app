@@ -1,7 +1,7 @@
 .button {
 
     -fx-background-color:  #00CC00;
-    -fx-effect: dropshadow(three-pass-box, #FFCCFF, 20, 0, -10, 15);
+   // -fx-effect: dropshadow(three-pass-box, #FFCCFF, 20, 0, -10, 15);
    -fx-background-radius: 25px;
    -fx-border-color:  #FFCC99;
     -fx-border-radius: 25px;
@@ -13,7 +13,7 @@
 .button:hover {
 
    -fx-background-color:  #00CC00;
-   -fx-effect: dropshadow(three-pass-box, #FFCCFF, 20, 0, -10, 15);
+  // -fx-effect: dropshadow(three-pass-box, #FFCCFF, 20, 0, -10, 15);
    -fx-background-radius: 25px;
    -fx-border-color:  #0033CC;
    -fx-border-radius: 24px;

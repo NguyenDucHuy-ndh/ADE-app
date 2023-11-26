@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.About">
     <children>
       <ImageView fitHeight="640.0" fitWidth="880.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Image/game đoán từ.jpg" />
+            <Image url="@Image/blue - Copy.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="190.0" layoutY="65.0" prefHeight="58.0" prefWidth="118.0" stylesheets="@button_game.css" text="Animal" />
-      <Button layoutX="568.0" layoutY="65.0" prefHeight="58.0" prefWidth="118.0" stylesheets="@button_game.css" text="Items" />
-      <Button layoutX="382.0" layoutY="65.0" prefHeight="58.0" prefWidth="118.0" stylesheets="@button_game.css" text="Plants" />
+      <Button fx:id="IDanimal" layoutX="14.0" layoutY="158.0" onAction="#animal" prefHeight="80.0" prefWidth="80.0" stylesheets="@button_game.css" text="Animal" />
+      <Button fx:id="IDitems" layoutX="14.0" layoutY="413.0" onAction="#items" prefHeight="80.0" prefWidth="80.0" stylesheets="@button_game.css" text="Items" />
+      <Button fx:id="IDplant" layoutX="14.0" layoutY="282.0" onAction="#plant" prefHeight="80.0" prefWidth="80.0" stylesheets="@button_game.css" text="Plants" />
+      <StackPane fx:id="mainGame" layoutX="130.0" layoutY="74.0" prefHeight="565.0" prefWidth="750.0" />
+      <Label alignment="CENTER" layoutX="41.0" layoutY="6.0" prefHeight="55.0" prefWidth="800.0" style="-fx-background-color: #CCFFFF; -fx-background-radius: 30; -fx-border-color: #CC99CC; -fx-border-width: 4; -fx-border-radius: 30;" text="Word Guessing Game">
+         <font>
+            <Font name="Arial Bold Italic" size="30.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
