@@ -1,9 +1,13 @@
 package main.java;
 
+import animatefx.animation.BounceInUp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
@@ -14,6 +18,7 @@ import javafx.scene.control.TextField;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class About implements Initializable {
@@ -28,9 +33,12 @@ public class About implements Initializable {
     private Button edit;
 
     @FXML
+    private AnchorPane mainAbout;
+
+    @FXML
     private StackPane loadAbout;
 
-// Edit
+    // Edit
     @FXML
     private TextField editTarget;
 
@@ -47,12 +55,25 @@ public class About implements Initializable {
         String _editMeaning = editMeaning.getText().trim();
 
 
-        DictionaryDAO dao = new  DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "123456");
+        DictionaryDAO dao = new DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "dung1asdf");
         dao.updateWord(_editTarget, _editDescription, _editMeaning);
+
+        if (_editTarget.isEmpty() || _editDescription.isEmpty() || _editMeaning.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Edit");
+            alert.setHeaderText("Vui long nhap thong tin can sua");
+            alert.showAndWait();
+        }
+        else {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Edit");
+            alert.setHeaderText("Sửa từ Thành công");
+            alert.showAndWait();
+        }
     }
 // end Edit
 
-// Add
+    // Add
     @FXML
     private TextField addTarget;
 
@@ -67,14 +88,16 @@ public class About implements Initializable {
         String _addTarget = addTarget.getText().trim();
         String _addDescription = addDescription.getText().trim();
         String _addMeaning = addMeaning.getText().trim();
-
-
-        DictionaryDAO dao = new  DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "123456");
+        DictionaryDAO dao = new DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "dung1asdf");
         dao.addWord(_addTarget, _addDescription, _addMeaning);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("ADD");
+        alert.setHeaderText("Bạn đã thêm từ thành công");
+        Optional<ButtonType> result = alert.showAndWait();
     }
 // end Add
 
-// Delete
+    // Delete
     @FXML
     private TextField deleteTarget;
 
@@ -82,8 +105,21 @@ public class About implements Initializable {
     void deleteWord(ActionEvent event) {
         String _deleteTarget = deleteTarget.getText().trim();
 
-        DictionaryDAO dao = new  DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "123456");
+        DictionaryDAO dao = new DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "dung1asdf");
         dao.deleteWord(_deleteTarget);
+
+        if (_deleteTarget.isEmpty() ) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Delete");
+            alert.setHeaderText("Vui long nhap thong tin can xóa");
+            alert.showAndWait();
+        }
+        else {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Delete");
+            alert.setHeaderText("Xóa từ Thành công");
+            alert.showAndWait();
+        }
     }
 // end Delete
 
@@ -127,6 +163,24 @@ public class About implements Initializable {
             MyTranslateTransition myTranslateTransition = new MyTranslateTransition(loadAbout);
             myTranslateTransition.playFadeTransition();
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void startNewGame(ActionEvent event) throws IOException {
+        GuessTheWordController.getInstance().startNewGame();
+    }
+
+    public void game(ActionEvent actionEvent) throws IOException {
+        try {
+            AnchorPane view = FXMLLoader.load(getClass().getResource("GuessTheWord.fxml"));
+            mainAbout.getChildren().removeAll();
+            mainAbout.getChildren().setAll(view);
+//            MyTranslateTransition myTranslateTransition = new MyTranslateTransition(mainAbout);
+//            myTranslateTransition.playFadeTransition();
+            new BounceInUp(mainAbout).play();
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 
-<AnchorPane prefHeight="640.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.About">
+<AnchorPane fx:id="mainAbout" prefHeight="640.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.About">
     <children>
         <ImageView fitHeight="640.0" fitWidth="880.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -41,7 +41,7 @@
             </graphic>
         </Button>
         <StackPane fx:id="loadAbout" layoutY="140.0" prefHeight="500.0" prefWidth="880.0" />
-        <Button layoutX="56.0" layoutY="22.0" mnemonicParsing="false" onAction="#delete" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Game">
+        <Button layoutX="56.0" layoutY="22.0" mnemonicParsing="false" onAction="#game" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Game">
             <graphic>
                 <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                     <image>

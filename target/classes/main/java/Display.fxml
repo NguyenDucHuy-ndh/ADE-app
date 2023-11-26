@@ -70,7 +70,7 @@
             </HBox>
             <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#about" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="ABOUT">
+                  <Button mnemonicParsing="false" onAction="#about" prefHeight="50.0" prefWidth="160.0" stylesheets="@style.css" text="Function">
                      <graphic>
                         <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                            <image>

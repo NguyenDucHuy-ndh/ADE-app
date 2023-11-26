@@ -3,6 +3,7 @@ package main.java;
 import javafx.animation.*;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Path;
+
 import javafx.util.Duration;
 
 public class MyTranslateTransition {
