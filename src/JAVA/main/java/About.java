@@ -8,6 +8,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
+
 import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
@@ -35,13 +38,54 @@ public class About implements Initializable {
     private TextField editDescription;
 
     @FXML
-    private TextField editMeanig;
+    private TextField editMeaning;
 
     @FXML
     void editWord(ActionEvent event) {
+        String _editTarget = editTarget.getText().trim();
+        String _editDescription = editDescription.getText().trim();
+        String _editMeaning = editMeaning.getText().trim();
 
+
+        DictionaryDAO dao = new  DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "123456");
+        dao.updateWord(_editTarget, _editDescription, _editMeaning);
     }
-// Edit
+// end Edit
+
+// Add
+    @FXML
+    private TextField addTarget;
+
+    @FXML
+    private TextField addDescription;
+
+    @FXML
+    private TextField addMeaning;
+
+    @FXML
+    void addWord(ActionEvent event) {
+        String _addTarget = addTarget.getText().trim();
+        String _addDescription = addDescription.getText().trim();
+        String _addMeaning = addMeaning.getText().trim();
+
+
+        DictionaryDAO dao = new  DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "123456");
+        dao.addWord(_addTarget, _addDescription, _addMeaning);
+    }
+// end Add
+
+// Delete
+    @FXML
+    private TextField deleteTarget;
+
+    @FXML
+    void deleteWord(ActionEvent event) {
+        String _deleteTarget = deleteTarget.getText().trim();
+
+        DictionaryDAO dao = new  DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "123456");
+        dao.deleteWord(_deleteTarget);
+    }
+// end Delete
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

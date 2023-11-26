@@ -23,7 +23,14 @@ public class DictionaryDAO {
                 statement.setString(1, wordTarget);
                 statement.setString(2, description);
                 statement.setString(3, wordExplain);
-                statement.executeUpdate();
+
+                int addRows = statement.executeUpdate();
+
+                if (addRows > 0) {
+                    System.out.println("Đã thêm từ thành công.");
+                } else {
+                    System.out.println("Thêm từ không thành công.");
+                }
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -36,13 +43,13 @@ public class DictionaryDAO {
             String query = "UPDATE ten_bang SET description = ?, wordExplain = ? WHERE wordTarget = ?";
             try (PreparedStatement statement = connect.prepareStatement(query)) {
 
-                statement.setString(1, newDescription);
-                statement.setString(2, newWordExplain);
-                statement.setString(3, wordTarget);
+                statement.setString(1, wordTarget);
+                statement.setString(2, newDescription);
+                statement.setString(3, newWordExplain);
 
-                int rowsUpdated = statement.executeUpdate();
+                int updateRows = statement.executeUpdate();
 
-                if (rowsUpdated > 0) {
+                if (updateRows > 0) {
                     System.out.println("Đã cập nhật từ thành công.");
                 } else {
                     System.out.println("Không tìm thấy từ cần cập nhật.");
@@ -53,13 +60,21 @@ public class DictionaryDAO {
         }
     }
 
-    public void deleteWord(String wordTarget, String wordExplain) {
+    public void deleteWord(String wordTarget) {
         try (Connection connect = DriverManager.getConnection(url, username, password)) {
             String query = "DELETE FROM mywords WHERE wordTarget = ?";
             try (PreparedStatement statement = connect.prepareStatement(query)) {
                 statement.setString(1, wordTarget);
-                statement.executeUpdate();
+
+                int deleteRows = statement.executeUpdate();
+
+                if (deleteRows > 0) {
+                    System.out.println("Đã xóa từ thành công.");
+                } else {
+                    System.out.println("Xóa từ không thành công.");
+                }
             }
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

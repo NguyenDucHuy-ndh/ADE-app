@@ -7,29 +7,29 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.About">
+<AnchorPane prefHeight="500.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.About">
     <children>
         <ImageView fitHeight="518.0" fitWidth="880.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@Image/background edit.jpg" />
             </image>
         </ImageView>
-        <TextField layoutX="37.0" layoutY="31.0" prefHeight="60.0" prefWidth="278.0" promptText="Nhập từ bạn muốn chỉnh sửa..." style="-fx-background-color: white;" stylesheets="@translate.css">
+        <TextField fx:id="editTarget" layoutX="37.0" layoutY="31.0" prefHeight="60.0" prefWidth="278.0" promptText="Nhập từ bạn muốn chỉnh sửa..." style="-fx-background-color: white;" stylesheets="@translate.css">
             <font>
                 <Font name="Arial Bold Italic" size="14.0" />
             </font>
         </TextField>
-        <TextField layoutX="37.0" layoutY="213.0" prefHeight="60.0" prefWidth="582.0" promptText="Mô tả bạn mong muốn..," style="-fx-background-color: white;" stylesheets="@translate.css">
+        <TextField fx:id="editDescription" layoutX="37.0" layoutY="213.0" prefHeight="60.0" prefWidth="582.0" promptText="Mô tả bạn mong muốn..," style="-fx-background-color: white;" stylesheets="@translate.css">
             <font>
                 <Font name="Arial Bold Italic" size="14.0" />
             </font>
         </TextField>
-        <TextField layoutX="37.0" layoutY="116.0" prefHeight="60.0" prefWidth="413.0" promptText="Nghĩa của từ này...." style="-fx-background-color: white;" stylesheets="@translate.css">
+        <TextField fx:id="editMeaning" layoutX="37.0" layoutY="116.0" prefHeight="60.0" prefWidth="413.0" promptText="Nghĩa của từ này...." style="-fx-background-color: white;" stylesheets="@translate.css">
             <font>
                 <Font name="Arial Bold Italic" size="14.0" />
             </font>
         </TextField>
-        <Button layoutX="501.0" layoutY="31.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="131.0" style="-fx-background-color: #FFFFCC; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #FFCC00; -fx-border-width: 3;" stylesheets="@about.css" text="Edit Word">
+        <Button layoutX="501.0" layoutY="31.0" mnemonicParsing="false" onAction="#editWord" prefHeight="60.0" prefWidth="131.0" style="-fx-background-color: #FFFFCC; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #FFCC00; -fx-border-width: 3;" stylesheets="@about.css" text="Edit Word">
             <font>
                 <Font name="Arial Bold Italic" size="16.0" />
             </font>

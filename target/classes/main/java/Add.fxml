@@ -7,28 +7,28 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.About">
+<AnchorPane prefHeight="500.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.About">
    <children>
       <ImageView fitHeight="509.0" fitWidth="880.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Image/background add.jpg" />
+            <Image url="@Image/background%20add.jpg" />
          </image>
       </ImageView>
-      <TextField layoutX="44.0" layoutY="54.0" prefHeight="60.0" prefWidth="261.0" promptText="Nhập từ bạn muốn thêm..." stylesheets="@translate.css">
+      <TextField fx:id="addTarget" layoutX="44.0" layoutY="54.0" prefHeight="60.0" prefWidth="261.0" promptText="Nhập từ bạn muốn thêm..." stylesheets="@translate.css">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <TextField alignment="TOP_LEFT" layoutX="44.0" layoutY="264.0" prefHeight="170.0" prefWidth="446.0" promptText="Mô tả mà bạn mong muốn..." style="-fx-padding: 15;" stylesheets="@translate.css">
+      <TextField fx:id="addDescription" alignment="TOP_LEFT" layoutX="44.0" layoutY="264.0" prefHeight="170.0" prefWidth="446.0" promptText="Mô tả mà bạn mong muốn..." style="-fx-padding: 15;" stylesheets="@translate.css">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="44.0" layoutY="161.0" prefHeight="78.0" prefWidth="446.0" promptText="Nghĩa của từ này là..." stylesheets="@translate.css">
+      <TextField fx:id="addMeaning" layoutX="44.0" layoutY="161.0" prefHeight="78.0" prefWidth="446.0" promptText="Nghĩa của từ này là..." stylesheets="@translate.css">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="513.0" layoutY="54.0" mnemonicParsing="false" stylesheets="@style.css" text="Add Words" />
+      <Button layoutX="513.0" layoutY="54.0" mnemonicParsing="false" onAction="#addWord" stylesheets="@style.css" text="Add Words" />
    </children>
 </AnchorPane>
