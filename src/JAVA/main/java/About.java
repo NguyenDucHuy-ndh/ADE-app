@@ -168,18 +168,13 @@ public class About implements Initializable {
         }
     }
 
-    @FXML
-    public void startNewGame(ActionEvent event) throws IOException {
-        GuessTheWordController.getInstance().startNewGame();
-    }
+
 
     public void game(ActionEvent actionEvent) throws IOException {
         try {
             AnchorPane view = FXMLLoader.load(getClass().getResource("GuessTheWord.fxml"));
             mainAbout.getChildren().removeAll();
             mainAbout.getChildren().setAll(view);
-//            MyTranslateTransition myTranslateTransition = new MyTranslateTransition(mainAbout);
-//            myTranslateTransition.playFadeTransition();
             new BounceInUp(mainAbout).play();
         } catch (IOException e) {
             e.printStackTrace();
