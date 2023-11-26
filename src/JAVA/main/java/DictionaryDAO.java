@@ -40,12 +40,12 @@ public class DictionaryDAO {
     public void updateWord(String wordTarget, String newDescription, String newWordExplain) {
         try (Connection connect = DriverManager.getConnection(url, username, password)) {
 
-            String query = "UPDATE ten_bang SET description = ?, wordExplain = ? WHERE wordTarget = ?";
+            String query = "UPDATE mywords SET description = ?, wordExplain = ? WHERE wordTarget = ?";
             try (PreparedStatement statement = connect.prepareStatement(query)) {
 
-                statement.setString(1, wordTarget);
-                statement.setString(2, newDescription);
-                statement.setString(3, newWordExplain);
+                statement.setString(1, newDescription);
+                statement.setString(2, newWordExplain);
+                statement.setString(3, wordTarget);
 
                 int updateRows = statement.executeUpdate();
 
