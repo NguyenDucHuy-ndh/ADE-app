@@ -6,7 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.About">
    <children>
       <ImageView fitHeight="565.0" fitWidth="750.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -25,5 +25,6 @@
             </ImageView>
          </graphic>
       </Button>
+      <Button layoutX="551.0" layoutY="228.0" mnemonicParsing="false" onAction="#Continute" prefHeight="54.0" prefWidth="100.0" stylesheets="@button_game.css" text="Continute" />
    </children>
 </AnchorPane>

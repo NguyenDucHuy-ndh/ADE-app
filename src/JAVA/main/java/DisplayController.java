@@ -31,7 +31,7 @@ public class DisplayController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 //        try {
-//            AnchorPane fxml = FXMLLoader.load(getClass().getResource("HOME.fxml"));
+//            AnchorPane fxml = FXMLLoader.load(getClass().getResource("GuessTheWord.fxml"));
 //            mainFace.getChildren().removeAll();
 //            mainFace.getChildren().setAll(fxml);
 //        } catch (IOException e) {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -39,7 +40,7 @@
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Button layoutX="673.0" layoutY="357.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="88.0" style="-fx-background-color: #FFFFCC;" stylesheets="@button_search.css">
+      <Button alignment="TOP_LEFT" layoutX="624.0" layoutY="338.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="151.0" style="-fx-background-color: #FFFFCC;" stylesheets="@button_search.css">
          <graphic>
             <ImageView fitHeight="48.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -48,5 +49,10 @@
             </ImageView>
          </graphic>
       </Button>
+      <Hyperlink layoutX="688.0" layoutY="355.0" onAction="#setLinkGit" prefHeight="28.0" prefWidth="71.0" style="-fx-background-color: #FFFFCC;" text="Github">
+         <font>
+            <Font name="Arial Bold Italic" size="16.0" />
+         </font>
+      </Hyperlink>
    </children>
 </AnchorPane>
