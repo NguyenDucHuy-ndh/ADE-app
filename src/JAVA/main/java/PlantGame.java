@@ -39,9 +39,9 @@ public class PlantGame extends Game {
     }
 
     @Override
-    public void handleGuess(String guessedWord) {
+    public void handleGuess() {
         Scanner sc = new Scanner(System.in);
-        currentGuess = sc.nextLine();
+        String guessedWord = sc.nextLine();
         if (!isGameOver()) {
             if (guessedWord.equalsIgnoreCase(getCurentWord())) {
                 System.out.println("Corect");
