@@ -2,21 +2,27 @@ package main.java;
 
 import java.util.Arrays;
 import java.util.List;
-
-public class AnimalGame extends Game {
+/*
+public class AnimalGame extends Game implements PictureWord {
     private List<String> animalImages = Arrays.asList(
             "dog.jpg",
             "cat.jpg",
             "elephant.jpg",
             "lion.jpg"
     );
+    /*
+    private String currentWord; // Từ hiện tại đang được đoán
+    private String currentGuess; // Kết quả đoán hiện tại (chứa các ký tự đã đoán và các ký tự chưa đoán)
+    private int attempts; // Số lần đoán còn lại
+
+
     public AnimalGame(String[] animalWords) {
         super(animalWords);
     }
 
     @Override
     public void initialize() {
-        // Khởi tạo trò chơi động vật
+
     }
 
     @Override
@@ -49,5 +55,21 @@ public class AnimalGame extends Game {
             System.out.println("Chúc mừng, bạn đã hoàn thành tất cả các từ!");
         }
     }
-}
+
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public List<String> getImageUrls() {
+        return null;
+    }
+
+    @Override
+    public boolean checkGuess(String guess) {
+        return false;
+    }*/
+//}
+
 
