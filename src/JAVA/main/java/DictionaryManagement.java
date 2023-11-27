@@ -5,7 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class DictionaryManagement {
     private Dictionary dictionary;
@@ -32,6 +33,25 @@ public class DictionaryManagement {
             dictionary.addWord(newWord);
         }
 
+    }
+    private int binarySearch(List<Word> wordList, String target) {
+        int low = 0;
+        int high = wordList.size() - 1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            String midWord = wordList.get(mid).getWordTarget().toLowerCase();
+
+            if (midWord.equals(target)) {
+                return mid; // Found the word
+            } else if (midWord.compareTo(target) < 0) {
+                low = mid + 1; // Search the right half
+            } else {
+                high = mid - 1; // Search the left half
+            }
+        }
+
+        return -1; // Word not found
     }
 
     public void insertFromFile(String fileName) {
@@ -71,48 +91,52 @@ public class DictionaryManagement {
 
     }
 
+
+
     public void dictionaryLookup() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhập từ cần tra cứu: ");
-        String lkWord = sc.nextLine();
-        boolean isFound = false;
+        String lkWord = sc.nextLine().toLowerCase(); // Convert to lowercase for case-insensitive comparison
 
-        for (Word word : dictionary.getWordList()) {
-            if (word.getWordTarget().equalsIgnoreCase(lkWord)) {
-                System.out.println("Từ vựng: " + word.getWordTarget());
-                System.out.println("Giải nghĩa: " + word.getWordExplain());
-                isFound = true;
-                break;
-            }
-        }
+        // Sort the word list to enable binary search
+        Collections.sort(dictionary.getWordList(), Comparator.comparing(Word::getWordTarget));
 
-        if (!isFound) {
+        int index = binarySearch(dictionary.getWordList(), lkWord);
+
+        if (index != -1) {
+            Word word = dictionary.getWordList().get(index);
+            System.out.println("Từ vựng: " + word.getWordTarget());
+            System.out.println("Giải nghĩa: " + word.getWordExplain());
+        } else {
             System.out.println("Không tìm thấy từ trong từ điển.");
         }
-
     }
 
     public void addWordCommandline() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Nhập từ cần thêm: ");
-        String wordTarget = sc.nextLine();
+        String wordTarget = sc.nextLine().toLowerCase(); // Convert to lowercase for case-insensitive comparison
 
         System.out.print("Nhập nghĩa tiếng Việt: ");
         String wordExplain = sc.nextLine();
 
         Word newWord = new Word(wordTarget, wordExplain);
-        for (Word word : dictionary.getWordList()) {
-            if (word.getWordTarget().equalsIgnoreCase(newWord.getWordTarget())) {
-                System.out.println("Từ vựng đã có sẵn trong từ điển!");
-                return;
-            }
+
+        // Use a HashSet to quickly check if the word already exists
+        Set<String> existingWords = dictionary.getWordList()
+                .stream()
+                .map(Word::getWordTarget)
+                .collect(Collectors.toSet());
+
+        if (existingWords.contains(wordTarget)) {
+            System.out.println("Từ vựng đã có sẵn trong từ điển!");
+        } else {
+            dictionary.addWord(newWord);
+            System.out.println("Thêm từ thành công!");
         }
-
-        dictionary.addWord(newWord);
-        System.out.println("Thêm từ thành công!");
-
     }
+
 
     public void editWordCommandline() {
         Scanner scanner = new Scanner(System.in);

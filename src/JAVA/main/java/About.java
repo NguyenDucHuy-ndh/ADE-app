@@ -38,11 +38,13 @@ public class About implements Initializable {
     @FXML
     private Button items;
 
-    @FXML
-    private StackPane mainGame;
+
 
     @FXML
     private Button plant;
+    @FXML
+    private StackPane mainGame;
+
 
 
     @FXML
@@ -146,9 +148,9 @@ public class About implements Initializable {
             AnchorPane view = FXMLLoader.load(getClass().getResource("Edit.fxml"));
             loadAbout.getChildren().removeAll();
             loadAbout.getChildren().setAll(view);
-            MyTranslateTransition myTranslateTransition = new MyTranslateTransition(loadAbout);
-            myTranslateTransition.playFadeTransition();
-
+//            MyTranslateTransition myTranslateTransition = new MyTranslateTransition(loadAbout);
+//            myTranslateTransition.playFadeTransition();
+            new BounceInUp(loadAbout).play();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -159,8 +161,9 @@ public class About implements Initializable {
             AnchorPane view = FXMLLoader.load(getClass().getResource("Add.fxml"));
             loadAbout.getChildren().removeAll();
             loadAbout.getChildren().setAll(view);
-            MyTranslateTransition myTranslateTransition = new MyTranslateTransition(loadAbout);
-            myTranslateTransition.playFadeTransition();
+//            MyTranslateTransition myTranslateTransition = new MyTranslateTransition(loadAbout);
+//            myTranslateTransition.playFadeTransition();
+            new BounceInUp(loadAbout).play();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -173,8 +176,7 @@ public class About implements Initializable {
             AnchorPane view = FXMLLoader.load(getClass().getResource("Delete.fxml"));
             loadAbout.getChildren().removeAll();
             loadAbout.getChildren().setAll(view);
-            MyTranslateTransition myTranslateTransition = new MyTranslateTransition(loadAbout);
-            myTranslateTransition.playFadeTransition();
+            new BounceInUp(loadAbout).play();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -193,7 +195,6 @@ public class About implements Initializable {
             e.printStackTrace();
         }
     }
-
     public void animal(ActionEvent actionEvent) {
         try {
             AnchorPane view = FXMLLoader.load(getClass().getResource("Animal.fxml"));
@@ -208,4 +209,8 @@ public class About implements Initializable {
     }
     public void items(ActionEvent actionEvent) {
     }
+
+    public void Continute(ActionEvent actionEvent) {
+    }
+
 }
