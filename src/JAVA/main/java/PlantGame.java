@@ -46,20 +46,11 @@ public class PlantGame extends Game {
     }
 
     @Override
-<<<<<<< HEAD
     public void handleGuess(String currentGuess) {
 
-        //Scanner sc = new Scanner(System.in);
-        //currentGuess = sc.nextLine();
-=======
-    public void handleGuess() {
         Scanner sc = new Scanner(System.in);
-<<<<<<< HEAD
         currentGuess = sc.nextLine();
-=======
         String guessedWord = sc.nextLine();
->>>>>>> 4f41f170831f01e0f836567b4a99974a1082e0db
->>>>>>> 88bae5ab2d8a739fefc4588f8a2e20aa255651e9
         if (!isGameOver()) {
             if (currentGuess.equalsIgnoreCase(getCurentWord())) {
                 System.out.println("Corect");
