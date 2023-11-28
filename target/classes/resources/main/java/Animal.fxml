@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.GameController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.GameController">
    <children>
       <ImageView fitHeight="565.0" fitWidth="750.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Image/game đoán từ.jpg" />
+            <Image url="@Image/gamedoantu.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="picture" fitHeight="191.0" fitWidth="277.0" layoutX="120.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Image/Palnt_Game/sunflower.png" />
-         </image></ImageView>
-      <TextField fx:id="gessWord" layoutX="175.0" layoutY="320.0" prefHeight="54.0" prefWidth="359.0" promptText="Nhập từ bạn đoán..." stylesheets="@translate.css" />
+      <ImageView fx:id="picture" fitHeight="191.0" fitWidth="277.0" layoutX="120.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="guessWord" layoutX="175.0" layoutY="320.0" prefHeight="54.0" prefWidth="359.0" promptText="Nhập từ bạn đoán..." stylesheets="@translate.css" />
       <Button layoutX="558.0" layoutY="320.0" mnemonicParsing="false" onAction="#submit" prefHeight="54.0" prefWidth="87.0" stylesheets="@button_game.css" text="Submit" />
       <Button layoutX="540.0" layoutY="32.0" mnemonicParsing="false" onAction="#suggest" prefHeight="54.0" prefWidth="122.0" stylesheets="@button_game.css" text="Suggest">
          <graphic>
@@ -28,6 +26,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="551.0" layoutY="228.0" mnemonicParsing="false" onAction="#Continute" prefHeight="54.0" prefWidth="100.0" stylesheets="@button_game.css" text="Continute" />
+      <Button layoutX="551.0" layoutY="228.0" mnemonicParsing="false" onAction="#continute" prefHeight="54.0" prefWidth="100.0" stylesheets="@button_game.css" text="Continute" />
+      <TextArea fx:id="charSuggest" layoutX="567.0" layoutY="145.0" prefHeight="40.0" prefWidth="65.0" />
    </children>
 </AnchorPane>

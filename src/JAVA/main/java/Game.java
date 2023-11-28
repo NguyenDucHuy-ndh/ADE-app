@@ -14,17 +14,10 @@ import java.io.IOException;
 
 public abstract class Game {
 
-<<<<<<< HEAD
 
-    public abstract void initialize();
     public abstract String getCurentWord();
-    public abstract void handleGuess(String guessedWord);
+    public abstract void handleGuess(String currentGuess);
 
 }
-=======
-    public abstract void initialize();
-    public abstract String getCurentWord();
-    public abstract void handleGuess();
 
-}
->>>>>>> 4f41f170831f01e0f836567b4a99974a1082e0db
+
