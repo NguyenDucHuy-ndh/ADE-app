@@ -17,13 +17,17 @@ public class GameController {
     @FXML
     private ImageView picture;
 
+
     @FXML
     private TextArea charSuggest;
 
+    private String[] imageUrls = new String[] {"Image/Palnt_Game/sunflower.png",
+            "Image/Palnt_Game/pumpkin.png",
+            "Image/Palnt_Game/cactus.png",};
+
     @FXML
     void initialize() {
-       // game = new PlantGame(/* Pass your image URLs here */);
-        //loadNextImage();
+        game = new PlantGame(imageUrls);
     }
 
     @FXML
@@ -42,6 +46,9 @@ public class GameController {
 
     }
 
+    public String[] getImageUrls() {
+        return imageUrls;
+    }
     private void loadNextImage() {
         // Logic to load the next image in the ImageView
         // For example:
@@ -52,7 +59,7 @@ public class GameController {
         charSuggest.clear();
     }
     public void Continute(javafx.event.ActionEvent actionEvent) {
-         game = new PlantGame();
+         game = new PlantGame( imageUrls);
          loadNextImage();
     }
 
@@ -62,5 +69,9 @@ public class GameController {
     }
 
     public void submit(javafx.event.ActionEvent actionEvent) {
+
+        String guessedWord = gessWord.getText().trim();
+        game.handleGuess(guessedWord);
+
     }
 }
