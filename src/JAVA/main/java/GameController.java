@@ -12,6 +12,8 @@ import java.util.ResourceBundle;
 
 public class GameController implements Initializable {
     private PlantGame plantGame;
+    private AnimalGame animalGame;
+    private Items items;
 
     @FXML
     private ImageView picture;

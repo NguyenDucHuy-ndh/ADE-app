@@ -22,7 +22,10 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class About implements Initializable {
-
+    @FXML
+    private StackPane mainGame;
+    @FXML
+    private AnchorPane mainAbout;
     @FXML
     private Button add;
 
@@ -42,13 +45,10 @@ public class About implements Initializable {
 
     @FXML
     private Button plant;
-    @FXML
-    private StackPane mainGame;
 
 
 
-    @FXML
-    private AnchorPane mainAbout;
+
 
     @FXML
     private StackPane loadAbout;
@@ -183,8 +183,6 @@ public class About implements Initializable {
         }
     }
 
-
-
     public void game(ActionEvent actionEvent) throws IOException {
         try {
             AnchorPane view = FXMLLoader.load(getClass().getResource("GuessTheWord.fxml"));
@@ -206,9 +204,27 @@ public class About implements Initializable {
         }
     }
     public void plant(ActionEvent actionEvent) {
+        try {
+            AnchorPane view = FXMLLoader.load(getClass().getResource("Plant.fxml"));
+            mainGame.getChildren().removeAll();
+            mainGame.getChildren().setAll(view);
+            new BounceInUp(mainGame).play();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     public void items(ActionEvent actionEvent) {
+        try {
+            AnchorPane view = FXMLLoader.load(getClass().getResource("Items.fxml"));
+            mainGame.getChildren().removeAll();
+            mainGame.getChildren().setAll(view);
+            new BounceInUp(mainGame).play();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
+
 
 
 }

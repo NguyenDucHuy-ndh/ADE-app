@@ -76,5 +76,3 @@ public class PlantGame extends Game {
     }
 
 }
-
-

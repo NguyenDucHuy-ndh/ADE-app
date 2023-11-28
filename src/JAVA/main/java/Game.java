@@ -16,8 +16,6 @@ public abstract class Game {
 
 
     public abstract String getCurentWord();
-    public abstract void handleGuess(String currentGuess);
+    public abstract void handleGuess(String currentWord);
 
 }
-
-
