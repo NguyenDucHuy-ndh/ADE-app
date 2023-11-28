@@ -16,8 +16,6 @@ public class GameController {
 
     @FXML
     private ImageView picture;
-
-
     @FXML
     private TextArea charSuggest;
 
