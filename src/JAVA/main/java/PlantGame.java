@@ -12,9 +12,8 @@ public class PlantGame extends Game {
 
     private String[] imageUrls = new String[] {"resources/main/java/Image/Palnt_Game/sunflower.png",
             "resources/main/java/Image/Palnt_Game/pumpkin.png",
-            "resources/main/java/Image/Palnt_Game/cactus.png"};
-
-    public String currentImg ; // đường dẫn đến ảnh hiện tại
+            "resources/main/java/Image/Palnt_Game/cactus.png",};
+    private String currentImg; // đường dẫn đến ảnh hiện tại
     private String[] word = new String[] {"sunflower", "pumpkin", "cactus"};
     private String currentWord; // Từ hiện tại đang được đoán
     public String currentGuess; // Kết quả đoán hiện tại (chứa các ký tự đã đoán và các ký tự chưa đoán)
@@ -26,11 +25,12 @@ public class PlantGame extends Game {
     public void startNewGame() {
         Random random = new Random();
         int r = random.nextInt(3);
+
         currentImg = imageUrls[r];
         currentWord = word[r];
 
-        attempts = 5; // Số lần đoán tối đa
 
+        attempts = 5; // Số lần đoán tối đa
     }
 
     public char suggest() {
