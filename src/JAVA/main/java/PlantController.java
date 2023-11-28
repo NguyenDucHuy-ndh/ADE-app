@@ -10,11 +10,7 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-<<<<<<< HEAD:src/JAVA/main/java/PlantController.java
 public class PlantController implements Initializable {
-=======
-public class GameController implements Initializable {
->>>>>>> 96b46806a009570186ac84566fb79f024b492a80:src/JAVA/main/java/GameController.java
     private PlantGame plantGame;
     private AnimalGame animalGame;
     private Items items;
@@ -39,19 +35,11 @@ public class GameController implements Initializable {
         String userGuess = guessWord.getText().trim().toLowerCase();
         String correct = plantGame.getCurentWord().toLowerCase();
 
-<<<<<<< HEAD:src/JAVA/main/java/PlantController.java
         boolean equal = userGuess.equals(correct);
 
         updateUI();
 
         if (equal) {
-=======
-        boolean containsSubstring = correct.contains(userGuess);
-
-        updateUI();
-
-        if (containsSubstring) {
->>>>>>> 96b46806a009570186ac84566fb79f024b492a80:src/JAVA/main/java/GameController.java
             System.out.println("true");
             showGameWinAlert();
         } else {
@@ -84,15 +72,10 @@ public class GameController implements Initializable {
 
     private void showGameOverAlert() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-<<<<<<< HEAD:src/JAVA/main/java/PlantController.java
         alert.setTitle("Wrong");
         alert.setHeaderText("Wrong");
 
         alert.showAndWait();
-=======
-        alert.setTitle("Game Over");
-        alert.setHeaderText("Game Over");
->>>>>>> 96b46806a009570186ac84566fb79f024b492a80:src/JAVA/main/java/GameController.java
 
     }
     private void showGameWinAlert() {
