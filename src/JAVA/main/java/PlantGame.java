@@ -4,9 +4,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class PlantGame extends Game {
-    private String[] imageUrls = new String[] {"Image/lemon.jpg", "Image/orange.jpg"};
+    private String[] imageUrls = new String[] {"Image/Palnt_Game/sunflower.png",
+            "Image/Palnt_Game/pumpkin.png",
+            "Image/Palnt_Game/cactus.png",};
     private String currentImg; // đường dẫn đến ảnh hiện tại
-    private String[] word = new String[] {"lemon", "orange"};
+    private String[] word = new String[] {"sunflower", "pumpkin", "cactus"};
     private String currentWord; // Từ hiện tại đang được đoán
     private String currentGuess; // Kết quả đoán hiện tại (chứa các ký tự đã đoán và các ký tự chưa đoán)
     private int attempts; // Số lần đoán còn lại
@@ -40,8 +42,9 @@ public class PlantGame extends Game {
 
     @Override
     public void handleGuess(String guessedWord) {
+
         Scanner sc = new Scanner(System.in);
-        currentGuess = sc.nextLine();
+        guessedWord = sc.nextLine();
         if (!isGameOver()) {
             if (guessedWord.equalsIgnoreCase(getCurentWord())) {
                 System.out.println("Corect");

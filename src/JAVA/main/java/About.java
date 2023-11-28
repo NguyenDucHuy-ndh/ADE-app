@@ -210,7 +210,5 @@ public class About implements Initializable {
     public void items(ActionEvent actionEvent) {
     }
 
-    public void Continute(ActionEvent actionEvent) {
-    }
 
 }
