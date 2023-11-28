@@ -1,75 +1,109 @@
 package main.java;
 
+import animatefx.animation.BounceInUp;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 
-import java.awt.event.ActionEvent;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Optional;
+import java.util.ResourceBundle;
 
-public class GameController {
+public class GameController implements Initializable {
 
-    private PlantGame game;
-
-    @FXML
-    private TextField gessWord;
+    private PlantGame plantGame;
+    private PlantGame AnimalGame;
+    private PlantGame ItemGame;
 
     @FXML
     private ImageView picture;
+
+    @FXML
+    private TextField guessWord;
     @FXML
     private TextArea charSuggest;
 
-    private String[] imageUrls = new String[] {"Image/Palnt_Game/sunflower.png",
-            "Image/Palnt_Game/pumpkin.png",
-            "Image/Palnt_Game/cactus.png",};
 
     @FXML
-    void initialize() {
-        game = new PlantGame(imageUrls);
+    void continute(ActionEvent event) {
+
     }
 
     @FXML
     void submit(ActionEvent event) {
-        String guessedWord = gessWord.getText().trim();
-        game.handleGuess(guessedWord);
+        String userGuess = guessWord.getText().trim().toLowerCase();
+        String correct = plantGame.getCurentWord().toLowerCase();
+        updateUI();
 
-        if (game.isWordGuessed() || game.isGameOver()) {
-            // Display appropriate message or load next image
-            loadNextImage();
+        if (userGuess.equals(correct)) {
+            showGameWinAlert();
+        } else {
+            showGameOverAlert();
         }
+
     }
 
     @FXML
     void suggest(ActionEvent event) {
-
-    }
-
-    public String[] getImageUrls() {
-        return imageUrls;
-    }
-    private void loadNextImage() {
-        // Logic to load the next image in the ImageView
-        // For example:
-        //picture.setImage(new Image("path/to/your/image.jpg"));
-        // Start a new game
-        game.startNewGame();
-        gessWord.clear();
-        charSuggest.clear();
-    }
-    public void Continute(javafx.event.ActionEvent actionEvent) {
-         game = new PlantGame( imageUrls);
-         loadNextImage();
-    }
-
-    public void suggest(javafx.event.ActionEvent actionEvent) {
-        char suggestedChar = game.suggest();
+        char suggestedChar = plantGame.suggest();
         charSuggest.appendText(String.valueOf(suggestedChar));
     }
 
-    public void submit(javafx.event.ActionEvent actionEvent) {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        plantGame = new PlantGame();
+        AnimalGame = new PlantGame();
+        ItemGame = new PlantGame();
+        updateUI();
+    }
 
-        String guessedWord = gessWord.getText().trim();
-        game.handleGuess(guessedWord);
+    private void updateUI() {
+        // Cập nhật ImageView và các thành phần khác dựa trên trạng thái của plantGame
+        picture.setImage(new Image(plantGame.getCurrentImg()));
+        guessWord.clear();
+        charSuggest.clear();
 
     }
+
+    private void showGameOverAlert() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Game Over");
+        alert.setHeaderText("Game Over");
+        alert.setContentText("Do you want to start a new game?");
+
+        ButtonType buttonTypeYes = new ButtonType("Yes", ButtonBar.ButtonData.YES);
+        ButtonType buttonTypeNo = new ButtonType("No", ButtonBar.ButtonData.NO);
+        alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeNo);
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == buttonTypeYes) {
+            plantGame.startNewGame();
+            updateUI();
+        } else {
+            // Handle the case where the user doesn't want to start a new game
+        }
+    }
+    private void showGameWinAlert() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Game Win");
+        alert.setHeaderText("You Win");
+
+        alert.setContentText("Do you want to start a new game?");
+
+        ButtonType buttonTypeYes = new ButtonType("Yes", ButtonBar.ButtonData.YES);
+        ButtonType buttonTypeNo = new ButtonType("No", ButtonBar.ButtonData.NO);
+        alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeNo);
+    }
+
+    public void Continute(ActionEvent actionEvent) {
+    }
+
+
 }

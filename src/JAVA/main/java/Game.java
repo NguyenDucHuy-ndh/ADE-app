@@ -15,9 +15,7 @@ import java.io.IOException;
 public abstract class Game {
 
 
-    public abstract void initialize();
     public abstract String getCurentWord();
-    public abstract void handleGuess(String guessedWord);
+    public abstract void handleGuess(String currentWord);
 
 }
-

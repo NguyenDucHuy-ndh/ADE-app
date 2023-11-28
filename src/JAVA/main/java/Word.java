@@ -1,6 +1,8 @@
 package main.java;
 
 import animatefx.animation.BounceInUp;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,6 +29,22 @@ public class Word {
     public String getWordExplain() {
         return word_explain;
     }
+    public final String getWord() {
+        return word.get();
+    }
 
+    public final StringProperty wordProperty() {
+        return word;
+    }
+
+    public final void setWord(String value) {
+        this.word.set(value);
+
+    }
+    private final StringProperty word = new SimpleStringProperty(this, "word");
+
+    public Word(String word) {
+        setWord(word);
+    }
 }
 

@@ -9,17 +9,18 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class PlantGame extends Game {
-    private String[] imageUrls = new String[] {"Image/Palnt_Game/sunflower.png",
-            "Image/Palnt_Game/pumpkin.png",
-            "Image/Palnt_Game/cactus.png",};
-    private String currentImg; // đường dẫn đến ảnh hiện tại
+
+    private String[] imageUrls = new String[] {"resources/main/java/Image/Palnt_Game/sunflower.png",
+            "resources/main/java/Image/Palnt_Game/pumpkin.png",
+            "resources/main/java/Image/Palnt_Game/cactus.png"};
+
+    public String currentImg ; // đường dẫn đến ảnh hiện tại
     private String[] word = new String[] {"sunflower", "pumpkin", "cactus"};
     private String currentWord; // Từ hiện tại đang được đoán
     public String currentGuess; // Kết quả đoán hiện tại (chứa các ký tự đã đoán và các ký tự chưa đoán)
     private int attempts; // Số lần đoán còn lại
 
-    public PlantGame(String[] imageUrls) {
-        this.imageUrls = imageUrls;
+    public PlantGame() {
         startNewGame();
     }
     public void startNewGame() {
@@ -29,15 +30,11 @@ public class PlantGame extends Game {
         currentWord = word[r];
 
         attempts = 5; // Số lần đoán tối đa
+
     }
 
     public char suggest() {
         return currentWord.charAt(0);
-    }
-
-    @Override
-    public void initialize() {
-
     }
 
     @Override
@@ -47,35 +44,20 @@ public class PlantGame extends Game {
 
     @Override
     public void handleGuess(String currentGuess) {
-
-        Scanner sc = new Scanner(System.in);
-        currentGuess = sc.nextLine();
-        String guessedWord = sc.nextLine();
         if (!isGameOver()) {
             if (currentGuess.equalsIgnoreCase(getCurentWord())) {
-                System.out.println("Corect");
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setTitle("Plant");
-                alert.setHeaderText("Corect, congratulations!");
-                //ButtonType buttonTypeYes = new ButtonType("Yes", ButtonBar.ButtonData.YES);
-                //ButtonType buttonTypeNo = new ButtonType("No", ButtonBar.ButtonData.NO);
-                //alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeNo);
-                Optional<ButtonType> result = alert.showAndWait();
-
+                System.out.println("Correct");
             } else {
                 System.out.println("Wrong");
                 attempts--;
                 System.out.println("Số lần đoán còn lại: " + getAttempts());
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setTitle("Plant");
-                alert.setHeaderText("incorect, falied!"+getAttempts());
             }
         }
 
-
     }
+
     public boolean isWordGuessed() {
-        return currentGuess.toString().equals(currentWord);
+        return currentGuess.equals(currentWord);
     }
     public boolean isGameOver() {
         return attempts == 0 || isWordGuessed();
@@ -94,5 +76,3 @@ public class PlantGame extends Game {
     }
 
 }
-
-
