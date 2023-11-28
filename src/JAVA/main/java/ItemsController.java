@@ -1,26 +1,18 @@
 package main.java;
 
-import animatefx.animation.BounceInUp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
-
-import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class GameController implements Initializable {
+public class ItemsController implements Initializable {
+    private Items plantGame;
 
-    private PlantGame plantGame;
-    private PlantGame AnimalGame;
-    private PlantGame ItemGame;
 
     @FXML
     private ImageView picture;
@@ -33,19 +25,26 @@ public class GameController implements Initializable {
 
     @FXML
     void continute(ActionEvent event) {
-
+        plantGame.startNewGame();
+        updateUI();
     }
 
     @FXML
     void submit(ActionEvent event) {
         String userGuess = guessWord.getText().trim().toLowerCase();
         String correct = plantGame.getCurentWord().toLowerCase();
+
+        boolean equal = userGuess.equals(correct);
+
         updateUI();
 
-        if (userGuess.equals(correct)) {
+        if (equal) {
+            System.out.println("true");
             showGameWinAlert();
         } else {
+            System.out.println("false");
             showGameOverAlert();
+
         }
 
     }
@@ -58,9 +57,7 @@ public class GameController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        plantGame = new PlantGame();
-        AnimalGame = new PlantGame();
-        ItemGame = new PlantGame();
+        plantGame = new Items();
         updateUI();
     }
 
@@ -74,8 +71,16 @@ public class GameController implements Initializable {
 
     private void showGameOverAlert() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Game Over");
-        alert.setHeaderText("Game Over");
+        alert.setTitle("Wrong");
+        alert.setHeaderText("Wrong");
+
+        alert.showAndWait();
+
+    }
+    private void showGameWinAlert() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Game Win");
+        alert.setHeaderText("You Win");
         alert.setContentText("Do you want to start a new game?");
 
         ButtonType buttonTypeYes = new ButtonType("Yes", ButtonBar.ButtonData.YES);
@@ -84,26 +89,16 @@ public class GameController implements Initializable {
 
         Optional<ButtonType> result = alert.showAndWait();
         if (result.isPresent() && result.get() == buttonTypeYes) {
+            // Người dùng chọn "Yes", thực hiện logic bắt đầu trò chơi mới ở đây
             plantGame.startNewGame();
+            // Sau đó, cập nhật giao diện người dùng với trạng thái mới
             updateUI();
         } else {
-            // Handle the case where the user doesn't want to start a new game
+            updateUI();
+            Alert a = new Alert(Alert.AlertType.CONFIRMATION);
+            a.setTitle("Thank you");
+            a.setHeaderText("Thank you");
+            a.showAndWait();
         }
     }
-    private void showGameWinAlert() {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Game Win");
-        alert.setHeaderText("You Win");
-
-        alert.setContentText("Do you want to start a new game?");
-
-        ButtonType buttonTypeYes = new ButtonType("Yes", ButtonBar.ButtonData.YES);
-        ButtonType buttonTypeNo = new ButtonType("No", ButtonBar.ButtonData.NO);
-        alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeNo);
-    }
-
-    public void Continute(ActionEvent actionEvent) {
-    }
-
-
 }

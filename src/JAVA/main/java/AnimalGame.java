@@ -10,10 +10,10 @@ import java.util.Scanner;
 
 public class AnimalGame extends Game {
 
-    private String[] imageUrls = new String[] {"resources/main/java/Image/Palnt_Game/dog.png",
-            "resources/main/java/Image/Palnt_Game/elephant.png",
-            "resources/main/java/Image/Palnt_Game/lion.png",
-            "resources/main/java/Image/Palnt_Game/snake.png"};
+    private String[] imageUrls = new String[] {"resources/main/java/Image/animal_Game/dog.png",
+            "resources/main/java/Image/animal_Game/elephant.png",
+            "resources/main/java/Image/animal_Game/lion.png",
+            "resources/main/java/Image/animal_Game/snake.png"};
 
     public String currentImg ; // đường dẫn đến ảnh hiện tại
     private String[] word = new String[] {"dog", "elephant", "lion", "snake"};

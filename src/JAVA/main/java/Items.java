@@ -10,9 +10,9 @@ import java.util.Scanner;
 
 public class Items extends Game {
 
-    private String[] imageUrls = new String[] {"resources/main/java/Image/Palnt_Game/air-conditioner.png",
-            "resources/main/java/Image/Palnt_Game/laundry-machine.png",
-            "resources/main/java/Image/Palnt_Game/smart-fridge.png"};
+    private String[] imageUrls = new String[] {"resources/main/java/Image/Item_Game/air-conditioner.png",
+            "resources/main/java/Image/Item_Game/laundry-machine.png",
+            "resources/main/java/Image/Item_Game/smart-fridge.png"};
 
     public String currentImg ; // đường dẫn đến ảnh hiện tại
     private String[] word = new String[] {"air-conditioner", "laundry-machine", "smart-fridge"};
