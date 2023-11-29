@@ -76,7 +76,7 @@ public class About implements Initializable {
         if (_editTarget.isEmpty() || _editDescription.isEmpty() || _editMeaning.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Edit");
-            alert.setHeaderText("Vui long nhap thong tin can sua");
+            alert.setHeaderText("Vui lòng nhập thông tin cần sửa");
             alert.showAndWait();
         }
         else {
