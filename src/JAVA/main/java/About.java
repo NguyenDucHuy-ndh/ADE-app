@@ -70,7 +70,7 @@ public class About implements Initializable {
         String _editMeaning = editMeaning.getText().trim();
 
 
-        DictionaryDAO dao = new DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "dung1asdf");
+        DictionaryDAO dao = new DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "123456");
         dao.updateWord(_editTarget, _editDescription, _editMeaning);
 
         if (_editTarget.isEmpty() || _editDescription.isEmpty() || _editMeaning.isEmpty()) {
@@ -103,12 +103,19 @@ public class About implements Initializable {
         String _addTarget = addTarget.getText().trim();
         String _addDescription = addDescription.getText().trim();
         String _addMeaning = addMeaning.getText().trim();
-        DictionaryDAO dao = new DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "dung1asdf");
-        dao.addWord(_addTarget, _addDescription, _addMeaning);
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("ADD");
-        alert.setHeaderText("Bạn đã thêm từ thành công");
-        Optional<ButtonType> result = alert.showAndWait();
+        DictionaryDAO dao = new DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "123456");
+
+        if (dao.isWordExist(_addTarget)) {
+            showAlert("ADD", "Từ đã có trong Cơ sở dữ liệu", Alert.AlertType.ERROR);
+            return;
+        }
+        try {
+            dao.addWord(_addTarget, _addDescription, _addMeaning);
+            showAlert("ADD", "Bạn đã thêm từ thành công", Alert.AlertType.CONFIRMATION);
+        } catch (RuntimeException e) {
+            showAlert("ADD", "Thêm từ không thành công", Alert.AlertType.ERROR);
+        }
+
     }
 // end Add
 
@@ -120,23 +127,33 @@ public class About implements Initializable {
     void deleteWord(ActionEvent event) {
         String _deleteTarget = deleteTarget.getText().trim();
 
-        DictionaryDAO dao = new DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "dung1asdf");
-        dao.deleteWord(_deleteTarget);
+        DictionaryDAO dao = new DictionaryDAO("jdbc:mysql://127.0.0.1:3306/dictionarydb", "root", "123456");
+
 
         if (_deleteTarget.isEmpty() ) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Delete");
-            alert.setHeaderText("Vui long nhap thong tin can xóa");
+            alert.setHeaderText("Vui lòng nhập thông tin cần xóa");
             alert.showAndWait();
         }
         else {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Delete");
-            alert.setHeaderText("Xóa từ Thành công");
-            alert.showAndWait();
+            if (!dao.isWordExist(_deleteTarget)) {
+                showAlert("DELETE", "Từ không có trong Cơ sở dữ liệu", Alert.AlertType.ERROR);
+            } else {
+                dao.deleteWord(_deleteTarget);
+                showAlert("DELETE", "Xóa từ thành công", Alert.AlertType.CONFIRMATION);
+            }
         }
     }
 // end Delete
+
+
+    private void showAlert(String title, String content, Alert.AlertType alertType) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(content);
+        alert.showAndWait();
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

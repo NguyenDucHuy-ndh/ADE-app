@@ -16,8 +16,31 @@ public class DictionaryDAO {
         this.password = password;
     }
 
+    public boolean isWordExist(String wordTarget) {
+        try (Connection connect = DriverManager.getConnection(url, username, password)) {
+            String checkQuery = "SELECT * FROM mywords WHERE wordTarget = ?";
+            try (PreparedStatement checkStatement = connect.prepareStatement(checkQuery)) {
+                checkStatement.setString(1, wordTarget);
+
+                try (ResultSet resultSet = checkStatement.executeQuery()) {
+                    return resultSet.next(); // Nếu có kết quả, tức là từ đã tồn tại
+                }
+            }
+        } catch (SQLException e) {
+            // Xử lý Exception (ví dụ: in log hoặc thông báo lỗi)
+            e.printStackTrace();
+            return false; // Hoặc ném một Exception khác tùy theo yêu cầu
+        }
+    }
     public void addWord(String wordTarget, String description, String wordExplain) {
         try (Connection connect = DriverManager.getConnection(url, username, password)) {
+            // Kiểm tra xem từ đã tồn tại trong cơ sở dữ liệu hay chưa
+            if (isWordExist(wordTarget)) {
+                System.out.println("Từ đã có trong cơ sở dữ liệu.");
+                return;
+            }
+
+            // Nếu từ chưa tồn tại, thêm mới vào cơ sở dữ liệu
             String query = "INSERT INTO mywords (wordTarget, description, wordExplain) VALUES (?, ?, ?)";
             try (PreparedStatement statement = connect.prepareStatement(query)) {
                 statement.setString(1, wordTarget);
@@ -62,6 +85,11 @@ public class DictionaryDAO {
 
     public void deleteWord(String wordTarget) {
         try (Connection connect = DriverManager.getConnection(url, username, password)) {
+            if (!isWordExist(wordTarget)) {
+                System.out.println("Từ không có trong cơ sở dữ liệu.");
+                return;
+            }
+
             String query = "DELETE FROM mywords WHERE wordTarget = ?";
             try (PreparedStatement statement = connect.prepareStatement(query)) {
                 statement.setString(1, wordTarget);

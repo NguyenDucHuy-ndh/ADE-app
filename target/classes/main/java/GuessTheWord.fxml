@@ -12,7 +12,7 @@
     <children>
       <ImageView fitHeight="640.0" fitWidth="880.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Image/blue%20-%20Copy.jpg" />
+            <Image url="@Image/blue - Copy.jpg" />
          </image>
       </ImageView>
       <Button fx:id="IDanimal" layoutX="14.0" layoutY="158.0" onAction="#animal" prefHeight="80.0" prefWidth="80.0" stylesheets="@button_game.css" text="Animal" />

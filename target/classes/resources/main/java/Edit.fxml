@@ -11,7 +11,7 @@
     <children>
         <ImageView fitHeight="518.0" fitWidth="880.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@Image/background%20edit.jpg" />
+                <Image url="@Image/background edit.jpg" />
             </image>
         </ImageView>
         <TextField fx:id="editTarget" layoutX="37.0" layoutY="31.0" prefHeight="60.0" prefWidth="278.0" promptText="Nhập từ bạn muốn chỉnh sửa..." style="-fx-background-color: white;" stylesheets="@translate.css">
